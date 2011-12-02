@@ -1,5 +1,11 @@
+[user]
+	name = *Your Name*
+	email = *Your Email*
 [apply]
 	whitespace = fix
+[github]
+	user = *Your GitHub Username*
+	token = *Your GitHub API Token*
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
@@ -33,3 +39,11 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    pu = pull

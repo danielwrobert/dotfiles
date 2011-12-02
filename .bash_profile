@@ -18,3 +18,26 @@ export LANG="en_US"
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
+
+# Sets path for Python 2.7
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+# Sets path for Node.js
+export NODE_PATH="/usr/local/lib/node"
+
+# ENV VARIABLES AND FUNCTIONS FOR VIRTUALENVWRAPPER (UNCOMMENT AFTER INSTALL)
+#export WORKON_HOME=$HOME/virtualenvs
+# DON'T USE NEXT LINE - KEEP COMMENTED .. USE NEXT PATH:
+##. $HOME/bin/virtualenvwrapper.sh
+# USE THIS PATH:
+#. /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+
+# RVM for easy Ruby installation
+# This loads RVM into a shell session.
+[[ -s "/Users/danielrobert/.rvm/scripts/rvm" ]] && source "/Users/danielrobert/.rvm/scripts/rvm"
+
+
+## MySQL CONFIG PATH (NOT CURRENTLY THE CORRECT PATH - NEED TO RESEARCH)
+#export PATH=/usr/local/bin/mysql/bin:$PATH
+#export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH

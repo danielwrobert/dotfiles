@@ -50,11 +50,17 @@ alias c="tr -d '\n' | pbcopy"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Dropbox"
 alias p="cd ~/Projects"
 alias g="git"
 alias v="vim"
 alias m="mate ."
+
+# Code Editor Shortcuts
+alias mvim='open -a "MacVim"'
+alias espresso='open -a "Espresso"'
+alias coda='open -a "Coda"'
+
 
 # File size
 alias fs="stat -f \"%z bytes\""
