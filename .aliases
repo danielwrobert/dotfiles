@@ -60,7 +60,7 @@ alias m="mate ."
 alias mvim='open -a "MacVim"'
 alias espresso='open -a "Espresso"'
 alias coda='open -a "Coda"'
-alias sublime='open -a "Sublime Text 2"'
+alias subt2='open -a "Sublime Text 2"'
 
 # File size
 alias fs="stat -f \"%z bytes\""
