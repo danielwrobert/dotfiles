@@ -12,6 +12,16 @@ set mark-symlinked-directories on
 "\e[B": history-search-forward
 "\e[A": history-search-backward
 
+# Use ctrl+left/right arrow keys
+# to jump the cursor over words
+"\e[5C": forward-word
+"\e[5D": backward-word
+
+# Use option+left/right arrow keys
+# to jump the cursor to begining/end of lines
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+
 # Do not autocomplete hidden files unless the pattern explicitly begins with a dot
 set match-hidden-files off
 
