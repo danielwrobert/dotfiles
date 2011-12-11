@@ -33,11 +33,10 @@ export NODE_PATH="/usr/local/lib/node"
 # USE THIS PATH:
 #. /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 
-# RVM for easy Ruby installation
-# This loads RVM into a shell session.
-[[ -s "/Users/danielrobert/.rvm/scripts/rvm" ]] && source "/Users/danielrobert/.rvm/scripts/rvm"
-
-
 ## MySQL CONFIG PATH (NOT CURRENTLY THE CORRECT PATH - NEED TO RESEARCH)
-#export PATH=/usr/local/bin/mysql/bin:$PATH
-#export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+# export PATH=/usr/local/bin/mysql/bin:$PATH
+# export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+# RVM for easy Ruby installation
+# This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE )
+[[ -s "/Users/danielrobert/.rvm/scripts/rvm" ]] && source "/Users/danielrobert/.rvm/scripts/rvm"
