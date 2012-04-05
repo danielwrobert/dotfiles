@@ -1,3 +1,11 @@
+[user]
+	name = [YOUR NAME]
+	email = [YOUR EMAIL]
+
+[github]
+	user = [YOUR USERNAME]
+	token = [YOUR MAGIC TOKEN]
+
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
@@ -15,6 +23,14 @@
 	go = checkout -B
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+	# A few others
+	st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    pu = pull
 
 [apply]
 	# Detect whitespace errors when applying a patch
