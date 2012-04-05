@@ -12,6 +12,15 @@ alias v="vim"
 alias m="mate ."
 alias s="subl ."
 
+# Code Editor Shortcuts
+alias mvim='open -a "MacVim"'
+alias espresso='open -a "Espresso"'
+alias coda='open -a "Coda"'
+alias st2='open -a "Sublime Text 2"'
+
+# MAMP MySQL
+alias mamp="/Applications/MAMP/Library/bin/mysql -u root -p"
+
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
 
