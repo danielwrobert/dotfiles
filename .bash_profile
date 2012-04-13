@@ -48,4 +48,4 @@ export NPM_PATH="/usr/local/bin/npm"
 
 # RVM for easy Ruby installation
 # This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
-[[ -s "/Users/danielrobert/.rvm/scripts/rvm" ]] && source "/Users/danielrobert/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
