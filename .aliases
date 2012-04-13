@@ -11,6 +11,11 @@ alias g="git"
 alias v="vim"
 alias m="mate ."
 alias s="subl ."
+alias o="open"
+alias oo="open ."
+
+# List all files colorized in long format
+alias l="ls -Gl"
 
 # Code Editor Shortcuts
 alias mvim='open -a "MacVim"'
