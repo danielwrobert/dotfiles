@@ -25,8 +25,8 @@ export LANG="en_US"
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
-# Add tab completion for `killall SystemUIServer`
-complete -o "nospace" -W "SystemUIServer" killall
+# Add `killall` tab completion for common apps
+complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer" killall
 
 ### BEGIN MY SETTINGS ###
 # Sets path for Python 2.7
@@ -46,8 +46,8 @@ export NPM_PATH="/usr/local/bin/npm"
 #. /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 
 ## MySQL CONFIG PATH (NOT CURRENTLY THE CORRECT PATH - NEED TO RESEARCH)
-# export PATH=/usr/local/bin/mysql/bin:$PATH
-# export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export PATH=/usr/local/mysql/bin:$PATH
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # RVM for easy Ruby installation
 # This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
