@@ -10,7 +10,7 @@ alias p="cd ~/Projects"
 alias g="git"
 alias v="vim"
 alias m="mate ."
-alias s="subl ."
+alias s="sb ."
 alias o="open"
 alias oo="open ."
 
@@ -21,7 +21,7 @@ alias l="ls -Gl"
 alias mvim='open -a "MacVim"'
 alias espresso='open -a "Espresso"'
 alias coda='open -a "Coda"'
-alias st2='open -a "Sublime Text 2"'
+alias sb='open -a "Sublime Text 2"'
 
 # MAMP MySQL
 alias mamp="/Applications/MAMP/Library/bin/mysql -u root -p"
