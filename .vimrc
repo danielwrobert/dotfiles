@@ -1,4 +1,4 @@
-" Make vim more useful
+" Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -6,6 +6,8 @@ set clipboard=unnamed
 set wildmenu
 " Allow cursor keys in insert mode
 set esckeys
+" Allow backspace in insert mode
+set backspace=indent,eol,start
 " Optimize for fast terminal connections
 set ttyfast
 " Add the g flag to search/replace by default
@@ -24,6 +26,12 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+" Respect modeline in files
+set modeline
+set modelines=4
+" Enable per-directory .vimrc files and disable unsafe commands in them
+set exrc
+set secure
 " Enable line numbers
 set number
 " Enable syntax highlighting
@@ -51,7 +59,7 @@ set noerrorbells
 set nostartofline
 " Show the cursor position
 set ruler
-" Don’t show the intro message when starting vim
+" Don’t show the intro message when starting Vim
 set shortmess=atI
 " Show the current mode
 set showmode
