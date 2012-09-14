@@ -1,5 +1,7 @@
 # Dan’s dotfiles
 
+[mathias's dotfiles](https://github.com/mathiasbynens/dotfiles/) repo is full of great treats. His is the original project and I have just forked his and tweaked it a little bit for my personal preferences.
+
 ## Installation
 
 ### Using Git and the bootstrap script
