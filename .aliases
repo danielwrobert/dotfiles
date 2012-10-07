@@ -30,20 +30,11 @@ fi
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
 
-# Code Editor Shortcuts
-alias mvim='open -a "MacVim"'
-alias espresso='open -a "Espresso"'
-alias coda='open -a "Coda"'
-alias sb='open -a "Sublime Text 2"'
-
-# MAMP MySQL
-alias mamp="/Applications/MAMP/Library/bin/mysql -u root -p"
-
 # List all files colorized in long format, including dot files
 alias la="ls -la ${colorflag}"
 
 # List only directories
-alias lsd='ls -l ${colorflag} | grep "^d"'
+alias lsd='ls -l | grep "^d"'
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
@@ -55,13 +46,13 @@ alias sudo='sudo '
 # Gzip-enabled `curl`
 alias gurl="curl --compressed"
 
-# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+# Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
@@ -134,3 +125,19 @@ done
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
+## PERSONAL ALIASES:
+# Code Editor Shortcuts
+alias mvim='open -a "MacVim"'
+alias espresso='open -a "Espresso"'
+alias coda='open -a "Coda"'
+alias sb='open -a "Sublime Text 2"'
+
+# MAMP MySQL
+alias mamp="/Applications/MAMP/Library/bin/mysql -u root -p"
+
+# Root MySQL
+## START MySQL
+alias start.mysql="sudo /usr/local/mysql/support-files/mysql.server start"
+## STOP MySQL
+alias stop.mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
