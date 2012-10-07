@@ -47,22 +47,28 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-# Sets path for Node.js
+## Sets path for Node.js
 export NODE_PATH="/usr/local/bin/node"
-# Sets path for NPM
+## Sets path for NPM
 export NPM_PATH="/usr/local/bin/npm"
 
-# ENV VARIABLES AND FUNCTIONS FOR VIRTUALENVWRAPPER (UNCOMMENT AFTER INSTALL)
-#export WORKON_HOME=$HOME/virtualenvs
-# DON'T USE NEXT LINE - KEEP COMMENTED .. USE NEXT PATH:
-##. $HOME/bin/virtualenvwrapper.sh
-# USE THIS PATH:
-#. /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+## DRUSH
+export PATH=$PATH:$HOME/drush
 
-## MySQL CONFIG PATH (NOT CURRENTLY THE CORRECT PATH - NEED TO RESEARCH)
+## ENV VARIABLES AND FUNCTIONS FOR VIRTUALENVWRAPPER (UNCOMMENT AFTER INSTALL)
+export WORKON_HOME=$HOME/virtualenvs
+## Path for Virtualenvwrapper:
+. /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+
+## SENCHA
+export PATH=/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
+export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools-2.0.0-beta3"
+
+## MySQL CONFIG PATH
 export PATH=/usr/local/mysql/bin:$PATH
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+## Not needed - seems to be causeing an error in OSX 10.8+ .. commenting out for now:
+# export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
-# RVM for easy Ruby installation
+## RVM for easy Ruby installation
 # This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
