@@ -60,14 +60,10 @@ export WORKON_HOME=$HOME/virtualenvs
 ## Path for Virtualenvwrapper:
 . /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 
-## SENCHA
-export PATH=/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
-export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools-2.0.0-beta3"
-
 ## MySQL CONFIG PATH
 export PATH=/usr/local/mysql/bin:$PATH
 ## Not needed - seems to be causeing an error in OSX 10.8+ .. commenting out for now:
-export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/mysql/lib/
+#export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/mysql/lib/
 
 ## RVM for easy Ruby installation
 # This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
