@@ -4,43 +4,43 @@
 
 [github]
 	user = [YOUR USERNAME]
-	token = [YOUR MAGIC TOKEN]
+	email = [YOUR EMAIL]
 
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
 	# View the current working tree status using the short format
 	s = status -s
-	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
-	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
-	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+	# Diff
+	d = diff --patch-with-stat
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
 	# Clone a repository including all submodules
 	c = clone --recursive
 	# Commit all changes
-	ca = !git add -A && git commit -av
+	ca = commit -a
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
-	# Credit an author on the latest commit
-	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
-	# Interactive rebase with the given number of latest commits
-	reb = "!r() { git rebase -i HEAD~$1; }; r"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+	# A relly nice, single-line log list
+	lg = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	# A few others
 	st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-    lg = log -p
-    pu = pull
+	sts = status -sb
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	ds = diff --staged
+	#lg = log -p
+	pu = pull
+	ps = push
+	amend = commit --amend -C HEAD
+	undo = reset --soft HEAD^
+	standup = log --since '1 day ago' --oneline --author danielwrobert@gmail.com
+
 
 [apply]
 	# Detect whitespace errors when applying a patch
@@ -52,6 +52,9 @@
 	attributesfile = ~/.gitattributes
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+
+[format]
+	pretty = format:%C(yellow)%H %C(green)%ad%n%C(reset)%s %C(blue)[%cn]%C(magenta)%d%n
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
