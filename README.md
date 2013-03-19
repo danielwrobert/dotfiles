@@ -40,11 +40,11 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 
 My `~/.extra` looks something like this:
 
-# PATH additions
+## PATH additions
 export PATH="~/bin:$PATH"
 
-# Git credentials
-# Not in the repository, to prevent people from accidentally committing under my name
+## Git credentials
+### Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Daniel Robert"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
