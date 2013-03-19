@@ -25,12 +25,8 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null
 done
 
-# Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
-
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
@@ -43,7 +39,10 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 ### BEGIN MY SETTINGS ###
-# Sets path for Python 2.7
+## Tells system to look in /usr/local/bin BEFORE /usr/bin:
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+## Sets path for Python 2.7
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
@@ -54,6 +53,11 @@ export NPM_PATH="/usr/local/bin/npm"
 
 ## DRUSH
 export PATH=$PATH:$HOME/drush
+
+## ANDROID DEVELOPER TOOLS
+export PATH=$PATH:$HOME/Developer/ADT/sdk/tools
+## ANDROID ADB
+export PATH=$PATH:$HOME/Developer/ADT/sdk/platform-tools
 
 ## ENV VARIABLES AND FUNCTIONS FOR VIRTUALENVWRAPPER (UNCOMMENT AFTER INSTALL)
 export WORKON_HOME=$HOME/virtualenvs
