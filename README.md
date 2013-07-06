@@ -66,6 +66,8 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 
 ./.brew
 
+### Note: .vimrc_mathias file is from original repo by [Mathias Bynens](https://github.com/mathiasbynens/dotfiles.git). Keeping it in this repo for reference so that I can add features in as I go (currently new to VIM and still learning a lot of these settings). The .vimrc file is my current settings and much more barebones, which works for me while I am learning. I did not want to get rid of Mathias' file all together because there is a bunch of good stuff in there that I am sure will come in handy down the road. Use whatever suits your needs, or just use as a reference to make your own.
+
 ## Feedback
 
 Suggestions/improvements
