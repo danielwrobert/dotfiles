@@ -1,6 +1,8 @@
-" From MacVim Nettuts Video 1 (added 6.6.13):
-" Set Colorscheme (MacVim)
-"colorscheme railscat
+"####### Pathogen Initialization #######
+call pathogen#infect()
+call pathogen#helptags()
+
+"####### From MacVim Nettuts Video 1 (added 6.6.13): #######
 " Enable Syntax Highlighting
 syntax on
 " Enable Line Numbers
@@ -9,8 +11,6 @@ set number
 set tabstop=4
 " Set shift width indent
 set shiftwidth=4
-" Set font styles
-" set guifont=Courier:h15
 " Set Code Editor Indenting
 set smartindent
 set autoindent
@@ -19,7 +19,7 @@ set wildmode=list:longest
 " Enable Tree Folding
 set foldenable
 
-" From Mathias Dotfiles (added 6.6.13):
+"####### From Mathias Dotfiles (added 6.6.13): #######
 " Highlight current line
 set cursorline
 " Highlight searches
@@ -62,3 +62,47 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+let g:user_zen_expandabbr_key = '<s-tab>'
+
+
+"####### ZenCoding/Emmit Settings: #######
+" adding zen coding (http://code.google.com/p/zen-coding/ ) support
+let g:user_zen_leader_key = '<C-n>'
+
+" Shortcut summary:
+" n  <C-n>A        <Plug>ZenCodingAnchorizeSummary
+" n  <C-n>a        <Plug>ZenCodingAnchorizeURL
+" n  <C-n>k        <Plug>ZenCodingRemoveTag
+" n  <C-n>j        <Plug>ZenCodingSplitJoinTagNormal
+" n  <C-n>/        <Plug>ZenCodingToggleComment
+" n  <C-n>i        <Plug>ZenCodingImageSize
+" n  <C-n>N        <Plug>ZenCodingPrev
+" n  <C-n>n        <Plug>ZenCodingNext
+" v  <C-n>D        <Plug>ZenCodingBalanceTagOutwardVisual
+" n  <C-n>D        <Plug>ZenCodingBalanceTagOutwardNormal
+" v  <C-n>d        <Plug>ZenCodingBalanceTagInwardVisual
+" n  <C-n>d        <Plug>ZenCodingBalanceTagInwardNormal
+" n  <C-n>;        <Plug>ZenCodingExpandWord
+" n  <C-n>,        <Plug>ZenCodingExpandNormal
+" v  <C-n>,        <Plug>ZenCodingExpandVisual
+
+let g:user_zen_expandabbr_key = '<s-tab>'
+let g:user_zen_togglecomment_key = '<c-_>'
+"let g:user_zen_next_key = '<C-,>'
+"let g:user_zen_prev_key = '<C-;>'
+
+""" Other zen key binding settings """
+"-------------------------------------
+" user_zen_expandabbr_key'
+" user_zen_expandword_key'
+" user_zen_balancetaginward_key'
+" user_zen_balancetagoutward_key'
+" user_zen_next_key'
+" user_zen_prev_key'
+" user_zen_imagesize_key'
+" user_zen_togglecomment_key'
+" user_zen_splitjointag_key'
+" user_zen_removetag_key'
+" user_zen_anchorizeurl_key'
+" user_zen_anchorizesummary_key'
