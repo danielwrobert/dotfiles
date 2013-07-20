@@ -68,6 +68,12 @@ endif
 let g:user_zen_expandabbr_key = '<s-tab>'
 
 
+
+"####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
+"####### Command Remappings: #######
+nnoremap <leader><tab> :NERDTree<CR>
+
+
 "####### ZenCoding/Emmit Settings: #######
 " adding zen coding (http://code.google.com/p/zen-coding/ ) support
 let g:user_zen_leader_key = '<C-n>'
