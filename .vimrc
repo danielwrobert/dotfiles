@@ -91,7 +91,7 @@ autocmd FileType html,htmldjango,css,scss,less set tabstop=2
 autocmd FileType html,htmldjango,css,scss,less set softtabstop=2
 autocmd FileType html,htmldjango,css,scss,less set shiftwidth=2
 "adds auto-close brackets for css files
-autocmd FileType scss,css imap <buffer> { {<CR>}<Esc>ko<tab>
+autocmd FileType scss,css,javascript imap <buffer> { {<CR>}<Esc>ko<tab>
 
 
 "####### ZenCoding/Emmit Settings: #######
