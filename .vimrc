@@ -82,6 +82,14 @@ let g:user_zen_expandabbr_key = '<s-tab>'
 nnoremap <leader><tab> :NERDTree<CR>
 
 
+"##### Window Navagation #####
+" Quicker Window Switching
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+
 "####### Specific Filetype Settings #######
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
