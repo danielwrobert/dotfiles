@@ -2,11 +2,8 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+
 "####### From MacVim Nettuts Video 1 (added 6.6.13): #######
-" Enable Syntax Highlighting
-syntax on
-" Enable Line Numbers
-set number
 " Set tabs to 4 spaces
 set tabstop=4
 " Set shift width indent
@@ -18,18 +15,57 @@ set autoindent
 set wildmode=list:longest
 " Enable Tree Folding
 set foldenable
+" Set Colorscheme
+" let g:hybrid_use_Xresources=1
+colorscheme Tomorrow-Night-Bright
 
-"####### From Mathias Dotfiles (added 6.6.13): #######
+
+"####### From Mathias Dotfiles (updates 9.3.13): #######
+" Make Vim more useful
+set nocompatible
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
+" Allow cursor keys in insert mode
+set esckeys
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+" Optimize for fast terminal connections
+set ttyfast
+" Add the g flag to search/replace by default
+set gdefault
+" Use UTF-8 without BOM
+set encoding=utf-8 nobomb
+" Change mapleader
+let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
+
+" Respect modeline in files
+set modeline
+set modelines=4
+" Enable per-directory .vimrc files and disable unsafe commands in them
+set exrc
+set secure
+" Enable line numbers
+set number
+" Enable syntax highlighting
+syntax on
 " Highlight current line
 set cursorline
+" Make tabs as wide as two spaces
+" #set tabstop=2
 " Show “invisible” characters
-"# set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"# set list
+" #set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" #set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -40,11 +76,13 @@ set incsearch
 set laststatus=2
 " Enable mouse in all modes
 set mouse=a
+" Disable error bells
+set noerrorbells
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
 set ruler
-" Don’t show the intro message when starting vim
+" Don’t show the intro message when starting Vim
 set shortmess=atI
 " Show the current mode
 set showmode
@@ -52,6 +90,13 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+" Use relative line numbers
+if exists("&relativenumber")
+	set relativenumber
+	au BufReadPost * set relativenumber
+endif
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
@@ -73,14 +118,10 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
-let g:user_zen_expandabbr_key = '<s-tab>'
-
-
 
 "####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
 "####### Command Remappings: #######
 nnoremap <leader><tab> :NERDTree<CR>
-
 
 "##### Window Navagation #####
 " Quicker Window Switching
@@ -88,7 +129,6 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-
 
 "####### Specific Filetype Settings #######
 autocmd BufNewFile,BufRead *.scss set filetype=scss
@@ -98,9 +138,8 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,htmldjango,css,scss,less set tabstop=2
 autocmd FileType html,htmldjango,css,scss,less set softtabstop=2
 autocmd FileType html,htmldjango,css,scss,less set shiftwidth=2
-"adds auto-close brackets for css files
+"add auto-close brackets for css and js files
 autocmd FileType scss,css,javascript imap <buffer> { {<CR>}<Esc>ko<tab>
-
 
 "####### ZenCoding/Emmet Settings and Remappings: #######
 " adding zen coding (http://code.google.com/p/zen-coding/ ) support
