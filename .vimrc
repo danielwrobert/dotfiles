@@ -6,6 +6,7 @@ call pathogen#helptags()
 "####### From MacVim Nettuts Video 1 (added 6.6.13): #######
 " Set tabs to 4 spaces
 set tabstop=4
+set softtabstop=4
 " Set shift width indent
 set shiftwidth=4
 " Set Code Editor Indenting
