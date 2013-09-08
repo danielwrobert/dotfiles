@@ -139,6 +139,9 @@ alias espresso='open -a "Espresso"'
 alias coda='open -a "Coda"'
 alias sb='open -a "Sublime Text 2"'
 
+# Native JavaScript Console app in Terminal (Mac)
+alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
+
 # MAMP MySQL
 alias mamp="/Applications/MAMP/Library/bin/mysql -u root -p"
 
