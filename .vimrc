@@ -131,6 +131,16 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+"##### Convenient Copy & Paste to Clipboard (Mac only) #####
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    vmap <C-x> :!pbcopy<CR>
+    vmap <C-c> :w !pbcopy<CR><CR>
+    imap <C-v><C-v> <Esc>:r !pbpaste<CR>
+  endif
+endif
+
 "####### Specific Filetype Settings #######
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
