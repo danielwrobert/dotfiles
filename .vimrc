@@ -6,6 +6,7 @@ call pathogen#helptags()
 "####### From MacVim Nettuts Video 1 (added 6.6.13): #######
 " Set tabs to 4 spaces
 set tabstop=4
+" Set softtabs - spaces as tabs
 set softtabstop=4
 " Set shift width indent
 set shiftwidth=4
@@ -130,6 +131,17 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+"####### EDITING #######
+" convenient copy & paste to clipboard (Mac only)
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    vmap <C-x> :!pbcopy<CR>
+    vmap <C-c> :w !pbcopy<CR><CR>
+    imap <C-v><C-v> <Esc>:r !pbpaste<CR>
+  endif
+endif
 
 "####### Specific Filetype Settings #######
 autocmd BufNewFile,BufRead *.scss set filetype=scss
