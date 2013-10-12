@@ -132,8 +132,7 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-"####### EDITING #######
-" convenient copy & paste to clipboard (Mac only)
+"##### Convenient Copy & Paste to Clipboard (Mac only) #####
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin\n"
