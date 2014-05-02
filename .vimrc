@@ -22,7 +22,7 @@ set foldenable
 colorscheme Tomorrow-Night-Bright
 
 
-"####### From Mathias Dotfiles (updates 9.3.13): #######
+"####### From Mathias Dotfiles (updated 9.3.13): #######
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -48,7 +48,7 @@ set noeol
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+    set undodir=~/.vim/undo
 endif
 
 " Respect modeline in files
@@ -66,8 +66,8 @@ set cursorline
 " Make tabs as wide as two spaces
 " #set tabstop=2
 " Show “invisible” characters
-" #set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-" #set list
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -94,19 +94,19 @@ set title
 set showcmd
 " Use relative line numbers
 if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
+    set relativenumber
+    au BufReadPost * set relativenumber
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    :%s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
@@ -114,17 +114,16 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 if has("autocmd")
-	" Enable file type detection
-	filetype on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    " Enable file type detection
+    filetype on
+    " Treat .json files as .js
+    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
 
 "####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
 "####### Command Remappings: #######
 nnoremap <leader><tab> :NERDTree<CR>
-let NERDTreeIgnore=['.pyc$[[file]]']
 
 "##### Window Navagation #####
 " Quicker Window Switching
@@ -148,11 +147,16 @@ autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,htmldjango,css,scss,less set tabstop=2
-autocmd FileType html,htmldjango,css,scss,less set softtabstop=2
-autocmd FileType html,htmldjango,css,scss,less set shiftwidth=2
-"add auto-close brackets for css and js files
-autocmd FileType scss,css,javascript imap <buffer> { {<CR>}<Esc>ko<tab>
+"# autocmd FileType html,htmldjango,css,scss,less set tabstop=2
+"# autocmd FileType html,htmldjango,css,scss,less set softtabstop=2
+"# autocmd FileType html,htmldjango,css,scss,less set shiftwidth=2
+"add auto-close brackets
+autocmd FileType css,scss,javascript inoremap <buffer> { {}<Left>
+autocmd FileType css,scss,javascript inoremap <buffer> {} {}
+"# autocmd FileType css,scss,javascript inoremap <buffer> {<CR> {<CR>}<Esc>O<Tab>
+autocmd FileType css,scss,javascript inoremap <buffer> {<CR> {<CR>}<Esc>O
+autocmd FileType htmldjango inoremap <buffer> {{ {{<space><space>}}<Left><Left><Left>
+autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><Left>
 
 "####### ZenCoding/Emmet Settings and Remappings: #######
 " adding zen coding (http://code.google.com/p/zen-coding/ ) support

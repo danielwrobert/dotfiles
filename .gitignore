@@ -1,6 +1,3 @@
-# Compiled Python files
-*.pyc
-
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -12,3 +9,19 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+# Sublime Text Projects files
+*.sublime-workspace
+*.sublime-project
+
+# Sass Files
+*.sass-cache/
+
+# Project Resource Folders
+*_resources/
+
+# Django project local settings files
+*dan_settings.py
+
+# EditorConfig - http://editorconfig.org/
+*.editorconfig
