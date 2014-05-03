@@ -1,10 +1,10 @@
 [user]
-	name = [YOUR NAME]
-	email = [YOUR EMAIL]
+	name = Daniel W. Robert
+	email = danielwrobert@gmail.com
 
 [github]
-	user = [YOUR USERNAME]
-	email = [YOUR EMAIL]
+	user = danielwrobert
+	email = danielwrobert@gmail.com
 
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
