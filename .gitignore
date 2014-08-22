@@ -22,6 +22,3 @@ Thumbs.db
 
 # Django project local settings files
 *dan_settings.py
-
-# EditorConfig - http://editorconfig.org/
-*.editorconfig

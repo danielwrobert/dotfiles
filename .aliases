@@ -20,9 +20,6 @@ alias s="sb ."
 alias o="open"
 alias oo="open ."
 
-alias lynda="cd ~/Dropbox/Learnings/Web/Videos/Lynda_Courses"
-alias tutsplus="cd ~/Dropbox/Learnings/Web/Videos/Tuts+_Courses"
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"
