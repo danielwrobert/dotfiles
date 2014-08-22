@@ -54,6 +54,9 @@ export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.3.6/bin/php
 # WP-CLI Bash completions
 source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
 
+# Set SVN Default Editor to VIM
+export SVN_EDITOR=vim
+
 # GIT Autocomplete
 source ~/.git-completion.bash
 
