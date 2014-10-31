@@ -146,3 +146,9 @@ alias mamp="/Applications/MAMP/Library/bin/mysql -u root -p"
 alias start.mysql="sudo /usr/local/mysql/support-files/mysql.server start"
 ## STOP MySQL
 alias stop.mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
+
+# Root Apache
+## START Apache
+alias start.apache="sudo apachectrl start"
+## STOP Apache
+alias stop.apache="sudo apachectrl stop"
