@@ -19,7 +19,7 @@ set wildmode=list:longest
 set foldenable
 " Set Colorscheme
 " let g:hybrid_use_Xresources=1
-colorscheme Tomorrow-Night-Bright
+colorscheme flattown
 
 
 "####### From Mathias Dotfiles (updated 9.3.13): #######

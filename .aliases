@@ -139,7 +139,7 @@ alias atom='open -a "Atom"'
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 
 # MAMP MySQL
-alias mamp="/Applications/MAMP/Library/bin/mysql -u root -p"
+alias mamp_mysql="/Applications/MAMP/Library/bin/mysql -u root -p"
 
 # Root MySQL
 ## START MySQL
@@ -149,6 +149,6 @@ alias stop.mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
 
 # Root Apache
 ## START Apache
-alias start.apache="sudo apachectrl start"
+alias start.apache="sudo apachectl start"
 ## STOP Apache
-alias stop.apache="sudo apachectrl stop"
+alias stop.apache="sudo apachectl stop"
