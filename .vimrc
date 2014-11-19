@@ -124,6 +124,7 @@ endif
 "####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
 "####### Command Remappings: #######
 nnoremap <leader><tab> :NERDTree<CR>
+let g:NERDTreeDirArrows=0
 
 "##### Window Navagation #####
 " Quicker Window Switching
