@@ -1,0 +1,105 @@
+" Pathogen Initialization
+execute pathogen#infect()
+
+" Set tabs to 4 spaces
+set tabstop=4
+
+" Set shift width indent
+set shiftwidth=4
+
+" Set code editor indenting
+set smartindent
+set autoindent
+
+" Set autocompletion
+set wildmode=list:longest
+
+" Enable tree folding
+set foldenable
+
+" Enable syntax highlighting
+syntax on
+
+" Set colorscheme
+colorscheme flattown
+
+" Enable line numbers
+set number
+
+" Highlight current line
+set cursorline
+
+" Don't set cursor to start of line when moving around
+set nostartofline
+
+" Show invisible characters
+set listchars=eol:~,tab:>-,trail:*
+set list
+
+" Show the cursor position
+set ruler
+
+" Show current mode
+set showmode
+
+" Respect modeline in files
+set modeline
+set modelines=4
+
+" Highlight searches
+set hlsearch
+
+" Ignore case of searches
+set ignorecase
+
+" Highlight dynamically as pattern is typed
+set incsearch
+
+" Always show status line
+set laststatus=2
+
+" Show filename in window titlebar
+set title
+
+" Show the partial command as it is being typed
+set showcmd
+
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
+
+" Add the g flag to search/replace by default
+set gdefault
+
+" Change mapleader
+let mapleader=','
+
+" Use relative line numbers
+if exists("&relativenumber")
+	set relativenumber
+	au BufReadPost * set relativenumber
+endif
+
+" Strip trailing whitespaces (,ss)
+function! StripWhitespace()
+	let save_cursor = getpos('.')
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
+noremap <leader>ss :call StripWhitespace()<CR>
+
+" Quicker window switching
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Emmet settings and remappings
+let g:user_emmet_leader_key = '<C-n>'
+let g:uder_emmet_expandabbr_key = '<s-tab>'
+let g:user_emmet_togglecomment_key = '<c-_>'
+
+" NERDTree settings
+noremap <leader><tab> :NERDTree<CR>
+let g:NERDTreeDirArrows=0
