@@ -58,6 +58,9 @@ set incsearch
 " Always show status line
 set laststatus=2
 
+" Enable mouse in all modes
+set mouse=a
+
 " Show filename in window titlebar
 set title
 
@@ -72,6 +75,13 @@ set gdefault
 
 " Change mapleader
 let mapleader=','
+
+"Centralize backups, swapfiles, and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
 
 " Use relative line numbers
 if exists("&relativenumber")
@@ -103,3 +113,16 @@ let g:user_emmet_togglecomment_key = '<c-_>'
 " NERDTree settings
 noremap <leader><tab> :NERDTree<CR>
 let g:NERDTreeDirArrows=0
+
+" Specific file type settings
+if has("autocmd")
+	autocmd BufNewFile,BufRead *.scss set filetype=scss
+	autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+	autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+	autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+	autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+	autocmd FileType css,scss,javascript,php inoremap <buffer> { {}<left>
+	autocmd FileType css,scss,javascript,php inoremap <buffer> {} {}
+	autocmd FileType css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<ESC>O
+endif
