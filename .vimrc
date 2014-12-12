@@ -120,6 +120,8 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
+" Enable filetype plugins (nerdcommenter)
+filetype plugin on
 
 "####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
 "####### Command Remappings: #######
@@ -148,20 +150,16 @@ autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-"# autocmd FileType html,htmldjango,css,scss,less set tabstop=2
-"# autocmd FileType html,htmldjango,css,scss,less set softtabstop=2
-"# autocmd FileType html,htmldjango,css,scss,less set shiftwidth=2
+
 "add auto-close brackets
 autocmd FileType css,scss,javascript inoremap <buffer> { {}<Left>
 autocmd FileType css,scss,javascript inoremap <buffer> {} {}
-"# autocmd FileType css,scss,javascript inoremap <buffer> {<CR> {<CR>}<Esc>O<Tab>
 autocmd FileType css,scss,javascript inoremap <buffer> {<CR> {<CR>}<Esc>O
 autocmd FileType htmldjango inoremap <buffer> {{ {{<space><space>}}<Left><Left><Left>
 autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><Left>
 
 "####### ZenCoding/Emmet Settings and Remappings: #######
 " adding zen coding (http://code.google.com/p/zen-coding/ ) support
-
 let g:user_emmet_leader_key = '<C-n>'
 let g:user_emmet_expandabbr_key = '<s-tab>'
 let g:user_emmet_togglecomment_key = '<c-_>'

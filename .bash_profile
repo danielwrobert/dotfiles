@@ -61,16 +61,21 @@ export SVN_EDITOR=vim
 # GIT Autocomplete
 source ~/.git-completion.bash
 
-## Sets path for Node.js
+## NODE.JS
+# Sets path for Node.js
 export NODE_PATH="/usr/local/bin/node"
-## Sets path for NPM
+# Sets path for NPM
 export NPM_PATH="/usr/local/bin/npm"
+# Sets path for NPM root value
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
+## PYTHON
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-## RVM for easy Ruby installation
+## RUBY
+# RVM for easy Ruby installation
 # This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
