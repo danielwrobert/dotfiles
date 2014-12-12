@@ -1,0 +1,6 @@
+{
+	"git": true,
+	"dbHost": "localhost",
+	"dbUser": "root",
+	"dbPass": ""
+}
