@@ -105,6 +105,9 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" Enable filetype plugins (nerdcommenter)
+filetype plugin on
+
 " Emmet settings and remappings
 let g:user_emmet_leader_key = '<C-n>'
 let g:uder_emmet_expandabbr_key = '<s-tab>'
