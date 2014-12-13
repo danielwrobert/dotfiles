@@ -120,7 +120,7 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
-" Enable filetype plugins (nerdcommenter)
+" Enable filetype plugins (nerdcommenter - https://github.com/scrooloose/nerdcommenter)
 filetype plugin on
 
 "####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######

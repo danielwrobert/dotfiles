@@ -105,7 +105,7 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Enable filetype plugins (nerdcommenter)
+" Enable filetype plugins (nerdcommenter - https://github.com/scrooloose/nerdcommenter)
 filetype plugin on
 
 " Emmet settings and remappings
