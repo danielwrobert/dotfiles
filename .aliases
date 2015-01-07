@@ -152,3 +152,9 @@ alias stop.mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias start.apache="sudo apachectl start"
 ## STOP Apache
 alias stop.apache="sudo apachectl stop"
+
+# AirDrop and AWDL (Possible cause of WIFI connection issues in Yosemite)
+## START AirDrop and AWDL
+alias start.airdrop="sudo ifconfig awdl0 up"
+## STOP AirDrop and AWDL
+alias stop.airdrop="sudo ifconfig awdl0 down"

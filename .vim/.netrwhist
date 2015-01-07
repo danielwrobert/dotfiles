@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/danielrobert/Projects/Repositories/dan-and-jen'
-let g:netrw_dirhist_2='/Users/danielrobert/Desktop/vim-testing'
-let g:netrw_dirhist_3='/Users/danielrobert/Projects/Repositories/dan-and-jen'
-let g:netrw_dirhist_4='/Users/danielrobert/Dropbox/work/cuker/Working-Files/elli-quark'
-let g:netrw_dirhist_5='/Users/danielrobert/Dropbox/Projects/Local-Sandbox/Ghost'
-let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/wp-testing-env'
-let g:netrw_dirhist_7='/Users/danielrobert/Projects/WP-Dev/wptrt/wp-content/themes/boxy'
-let g:netrw_dirhist_8='/Users/danielrobert/Dropbox/Projects/WP-Dev/automattic-trial/wp-content/themes/eighties-wpcom'
-let g:netrw_dirhist_9='/Users/danielrobert/Projects/WP-Dev/wptrt/wp-content/themes/boxy'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/wptrt/wp-content/themes/sksdev'

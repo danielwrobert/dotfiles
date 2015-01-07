@@ -44,13 +44,12 @@ export WORKON_HOME=$HOME/virtualenvs
 
 ## MySQL CONFIG PATH
 export PATH=/usr/local/mysql/bin:$PATH
-## Not needed - seems to be causeing an error in OSX 10.8+ .. commenting out for now (not true - you need it):
-export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/mysql/lib/
+## Not needed - seems to be causeing an error in OSX 10.8+ .. commenting out for now
+#export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/mysql/lib/
 
-# WP-CLI directory
-export PATH=/Users/danielrobert/.wp-cli/bin:$PATH
-export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.5.9/bin/php
-#export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.3.6/bin/php
+# WP-CLI directory (Set when using MAMP)
+#export PATH=/Users/danielrobert/.wp-cli/bin:$PATH
+#export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.5.9/bin/php
 
 # WP-CLI Bash completions
 source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
