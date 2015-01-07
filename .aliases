@@ -139,22 +139,26 @@ alias atom='open -a "Atom"'
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 
 # MAMP MySQL
-alias mamp_mysql="/Applications/MAMP/Library/bin/mysql -u root -p"
+alias mamp-mysql="/Applications/MAMP/Library/bin/mysql -u root -p"
 
 # Root MySQL
 ## START MySQL
-alias start.mysql="sudo /usr/local/mysql/support-files/mysql.server start"
+alias start-mysql="sudo /usr/local/mysql/support-files/mysql.server start"
 ## STOP MySQL
-alias stop.mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
+alias stop-mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
 
 # Root Apache
 ## START Apache
-alias start.apache="sudo apachectl start"
+alias start-apache="sudo apachectl start"
 ## STOP Apache
-alias stop.apache="sudo apachectl stop"
+alias stop-apache="sudo apachectl stop"
 
 # AirDrop and AWDL (Possible cause of WIFI connection issues in Yosemite)
 ## START AirDrop and AWDL
-alias start.airdrop="sudo ifconfig awdl0 up"
+alias start-airdrop="sudo ifconfig awdl0 up"
 ## STOP AirDrop and AWDL
-alias stop.airdrop="sudo ifconfig awdl0 down"
+alias stop-airdrop="sudo ifconfig awdl0 down"
+
+# Node and NPM
+## Update NPM
+alias npm-update="sudo npm install npm -g"
