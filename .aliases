@@ -15,7 +15,7 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias v="vim"
-alias m="mvim ."
+alias mv="mvim ."
 alias s="sb ."
 alias o="open"
 alias oo="open ."
@@ -128,7 +128,7 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 ## PERSONAL ALIASES:
 # Code Editor Shortcuts
-#alias mvim='open -a "MacVim"'
+alias mvim='open -a "MacVim"'
 alias espresso='open -a "Espresso"'
 alias coda='open -a "Coda"'
 alias sb='open -a "Sublime Text 2"'
