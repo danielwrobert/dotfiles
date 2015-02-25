@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/wptrt/wp-content/themes/sksdev'
 let g:netrw_dirhist_2='/Users/danielrobert/.ssh/siteground'
 let g:netrw_dirhist_3='/Users/danielrobert/Projects/Repositories/open-source/underscores.me'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/danielrobert/Projects/Repositories/open-source/und
 let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/theme-review/pub-themes/wp-content/themes/exibeo'
 let g:netrw_dirhist_7='/Users/danielrobert'
 let g:netrw_dirhist_8='/Users/danielrobert/Desktop/react-test-gen/app'
+let g:netrw_dirhist_9='/Users/danielrobert/Projects/WP-Dev/theme-review/pub-themes/wp-content/themes/hew'

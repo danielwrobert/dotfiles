@@ -158,6 +158,11 @@ autocmd FileType css,scss,javascript inoremap <buffer> {<CR> {<CR>}<Esc>O
 autocmd FileType htmldjango inoremap <buffer> {{ {{<space><space>}}<Left><Left><Left>
 autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><Left>
 
+"####### VIM-JSX Settings: #######
+" adding Vim-JSX (https://github.com/mxw/vim-jsx) support
+let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 1
+
 "####### ZenCoding/Emmet Settings and Remappings: #######
 " adding zen coding (http://code.google.com/p/zen-coding/ ) support
 let g:user_emmet_leader_key = '<C-n>'
