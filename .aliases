@@ -135,6 +135,9 @@ alias sb='open -a "Sublime Text 2"'
 alias sb3='open -a "Sublime Text"'
 alias atom='open -a "Atom"'
 
+# FLush System DNS Cache
+alias flushdns='sudo dscacheutil -flushcache'
+
 # Native JavaScript Console application in Termianl (Mac)
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 

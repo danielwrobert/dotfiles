@@ -42,6 +42,8 @@
 	amend = commit --amend -C HEAD
 	undo = reset --soft HEAD^
 	standup = log --since '1 day ago' --oneline --author danielwrobert@gmail.com
+	g = grep -n
+	gi = grep -ni
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
