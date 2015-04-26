@@ -129,10 +129,11 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 ## PERSONAL ALIASES:
 # Code Editor Shortcuts
 alias mvim='open -a "MacVim"'
-alias espresso='open -a "Espresso"'
-alias coda='open -a "Coda"'
+#alias espresso='open -a "Espresso"'
+#alias coda='open -a "Coda"'
 alias sb2='open -a "Sublime Text 2"'
 alias sb='open -a "Sublime Text"'
+alias atom='open -a "Atom"'
 
 # FLush System DNS Cache
 alias flushdns='sudo dscacheutil -flushcache'
