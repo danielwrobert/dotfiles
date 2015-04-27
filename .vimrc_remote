@@ -128,4 +128,6 @@ if has("autocmd")
 	autocmd FileType css,scss,javascript,php inoremap <buffer> { {}<left>
 	autocmd FileType css,scss,javascript,php inoremap <buffer> {} {}
 	autocmd FileType css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<ESC>O
+
+	autocmd FileType css,scss,javascript inoremap <buffer> ( ()<Left>
 endif
