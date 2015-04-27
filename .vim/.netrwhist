@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/danielrobert/Projects/Repositories/automattic/slush-theme-pattern-library'
 let g:netrw_dirhist_2='/Users/danielrobert/Desktop/weasel-wanker'
 let g:netrw_dirhist_3='/Users/danielrobert/Projects/Repositories/automattic/slush-theme-pattern-library'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/danielrobert/Dropbox/Projects/WP-Dev/automattic-tr
 let g:netrw_dirhist_5='/Users/danielrobert/Projects/WP-Dev/theme-review/pub-themes/wp-content/themes'
 let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/theme-review/pub-themes/wp-content/themes/exibeo'
 let g:netrw_dirhist_7='/Users/danielrobert/Projects/Repositories/open-source/sassy-accio'
+let g:netrw_dirhist_8='/Users/danielrobert/Projects/WP-Dev/theme-review/premium-themes/wp-content/themes/dicot'

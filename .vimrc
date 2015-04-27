@@ -1,9 +1,9 @@
-"####### Pathogen Initialization #######
+" ####### Pathogen Initialization #######
 call pathogen#infect()
 call pathogen#helptags()
 
 
-"####### From MacVim Nettuts Video 1 (added 6.6.13): #######
+" ####### From MacVim Nettuts Video 1 (added 6.6.13): #######
 " Set tabs to 4 spaces
 set tabstop=4
 " Set softtabs - spaces as tabs
@@ -22,7 +22,7 @@ set foldenable
 colorscheme flattown
 
 
-"####### From Mathias Dotfiles (updated 9.3.13): #######
+" ####### From Mathias Dotfiles (updated 9.3.13): #######
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -123,19 +123,19 @@ endif
 " Enable filetype plugins (nerdcommenter - https://github.com/scrooloose/nerdcommenter)
 filetype plugin on
 
-"####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
-"####### Command Remappings: #######
+" ####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
+" ####### Command Remappings: #######
 nnoremap <leader><tab> :NERDTree<CR>
 let g:NERDTreeDirArrows=0
 
-"##### Window Navagation #####
+" ##### Window Navagation #####
 " Quicker Window Switching
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-"##### Convenient Copy & Paste to Clipboard (Mac only) #####
+" ##### Convenient Copy & Paste to Clipboard (Mac only) #####
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin\n"
@@ -145,25 +145,29 @@ if has("unix")
   endif
 endif
 
-"####### Specific Filetype Settings #######
+" ####### Specific Filetype Settings #######
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 "add auto-close brackets
-autocmd FileType css,scss,javascript inoremap <buffer> { {}<Left>
-autocmd FileType css,scss,javascript inoremap <buffer> {} {}
-autocmd FileType css,scss,javascript inoremap <buffer> {<CR> {<CR>}<Esc>O
+autocmd FileType css,scss,javascript,php inoremap <buffer> { {}<Left>
+autocmd FileType css,scss,javascript,php inoremap <buffer> {} {}
+autocmd FileType css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<Esc>O
 autocmd FileType htmldjango inoremap <buffer> {{ {{<space><space>}}<Left><Left><Left>
 autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><Left>
 
-"####### VIM-JSX Settings: #######
+"add auto-close parenthesis
+autocmd FileType css,scss,javascript inoremap <buffer> ( ()<Left>
+
+" ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
 let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 1
 
-"####### ZenCoding/Emmet Settings and Remappings: #######
+" ####### ZenCoding/Emmet Settings and Remappings: #######
 " adding zen coding (http://code.google.com/p/zen-coding/ ) support
 let g:user_emmet_leader_key = '<C-n>'
 let g:user_emmet_expandabbr_key = '<s-tab>'
@@ -186,19 +190,3 @@ let g:user_emmet_togglecomment_key = '<c-_>'
 " user_emmet_anchorizeurl_key'
 " user_emmet_anchorizesummary_key'
 
-" Shortcut summary:
-" n  <C-n>A        <Plug>ZenCodingAnchorizeSummary
-" n  <C-n>a        <Plug>ZenCodingAnchorizeURL
-" n  <C-n>k        <Plug>ZenCodingRemoveTag
-" n  <C-n>j        <Plug>ZenCodingSplitJoinTagNormal
-" n  <C-n>/        <Plug>ZenCodingToggleComment
-" n  <C-n>i        <Plug>ZenCodingImageSize
-" n  <C-n>N        <Plug>ZenCodingPrev
-" n  <C-n>n        <Plug>ZenCodingNext
-" v  <C-n>D        <Plug>ZenCodingBalanceTagOutwardVisual
-" n  <C-n>D        <Plug>ZenCodingBalanceTagOutwardNormal
-" v  <C-n>d        <Plug>ZenCodingBalanceTagInwardVisual
-" n  <C-n>d        <Plug>ZenCodingBalanceTagInwardNormal
-" n  <C-n>;        <Plug>ZenCodingExpandWord
-" n  <C-n>,        <Plug>ZenCodingExpandNormal
-" v  <C-n>,        <Plug>ZenCodingExpandVisual
