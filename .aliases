@@ -17,6 +17,7 @@ alias j="jobs"
 alias v="vim"
 alias m="mvim ."
 alias s="sb ."
+alias s2="sb2 ."
 alias o="open"
 alias oo="open ."
 
