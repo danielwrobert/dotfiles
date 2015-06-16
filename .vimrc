@@ -19,8 +19,11 @@ set wildmode=list:longest
 set foldenable
 " Set Colorscheme
 " let g:hybrid_use_Xresources=1
-colorscheme flattown
+" colorscheme flattown
+colorscheme seti
 
+" ####### VIM-CTRL-P Settings: #######
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " ####### From Mathias Dotfiles (updated 9.3.13): #######
 " Make Vim more useful
@@ -174,19 +177,4 @@ let g:user_emmet_expandabbr_key = '<s-tab>'
 let g:user_emmet_togglecomment_key = '<c-_>'
 "let g:user_emmet_next_key = '<C-,>'
 "let g:user_emmet_prev_key = '<C-;>'
-
-""" Other emmet key binding settings """
-"-------------------------------------
-" user_emmet_expandabbr_key'
-" user_emmet_expandword_key'
-" user_emmet_balancetaginward_key'
-" user_emmet_balancetagoutward_key'
-" user_emmet_next_key'
-" user_emmet_prev_key'
-" user_emmet_imagesize_key'
-" user_emmet_togglecomment_key'
-" user_emmet_splitjointag_key'
-" user_emmet_removetag_key'
-" user_emmet_anchorizeurl_key'
-" user_emmet_anchorizesummary_key'
 
