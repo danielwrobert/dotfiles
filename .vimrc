@@ -156,14 +156,18 @@ autocmd FileType php set omnifunc=phpcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 "add auto-close brackets
-autocmd FileType css,scss,javascript,php inoremap <buffer> { {}<Left>
-autocmd FileType css,scss,javascript,php inoremap <buffer> {} {}
-autocmd FileType css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<Esc>O
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> { {}<Left>
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> {} {}
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<Esc>O
 autocmd FileType htmldjango inoremap <buffer> {{ {{<space><space>}}<Left><Left><Left>
 autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><Left>
 
 "add auto-close parenthesis
-autocmd FileType css,scss,javascript inoremap <buffer> ( ()<Left>
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> ( ()<Left>
+
+"add auto-close quotes
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
