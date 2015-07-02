@@ -155,7 +155,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
-"add auto-close brackets
+"add auto-close curly-braces
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> { {}<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> {} {}
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<Esc>O
@@ -164,6 +164,9 @@ autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><
 
 "add auto-close parenthesis
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> ( ()<Left>
+
+"add auto-close brackets
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []Left>
 
 "add auto-close quotes
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
