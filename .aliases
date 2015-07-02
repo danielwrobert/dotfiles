@@ -163,6 +163,12 @@ alias start-airdrop="sudo ifconfig awdl0 up"
 ## STOP AirDrop and AWDL
 alias stop-airdrop="sudo ifconfig awdl0 down"
 
+# Set SVN ColorDiff
+alias svnd="svn diff | colordiff"
+
+# Set Grep color option
+alias cgrep="grep --color=always -rn"
+
 # Node and NPM
 ## Update NPM
 alias npm-update="sudo npm install npm -g"

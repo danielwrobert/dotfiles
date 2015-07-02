@@ -125,9 +125,20 @@ if has("autocmd")
 	autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 	autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-	autocmd FileType css,scss,javascript,php inoremap <buffer> { {}<left>
-	autocmd FileType css,scss,javascript,php inoremap <buffer> {} {}
-	autocmd FileType css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<ESC>O
+	"add auto-close curly-braces
+	autocmd FileType html,css,scss,javascript,php inoremap <buffer> { {}<Left>
+	autocmd FileType html,css,scss,javascript,php inoremap <buffer> {} {}
+	autocmd FileType html,css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<Esc>O
+	autocmd FileType htmldjango inoremap <buffer> {{ {{<space><space>}}<Left><Left><Left>
+	autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><Left>
+	
+	"add auto-close parenthesis
+	autocmd FileType html,css,scss,javascript,php inoremap <buffer> ( ()<Left>
 
-	autocmd FileType css,scss,javascript inoremap <buffer> ( ()<Left>
+	"add auto-close brackets
+	autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []Left>
+
+	""add auto-close quotes
+	autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
+	autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 endif
