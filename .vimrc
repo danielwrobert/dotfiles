@@ -166,7 +166,7 @@ autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> ( ()<Left>
 
 "add auto-close brackets
-autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []Left>
+autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []<Left>
 
 "add auto-close quotes
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
