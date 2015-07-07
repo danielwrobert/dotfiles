@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/danielrobert/Desktop/slush-gen-test-20150630'
 let g:netrw_dirhist_2='/Users/danielrobert/Projects/Repositories/open-source/labs'
 let g:netrw_dirhist_3='/Users/danielrobert/Projects/Repositories/open-source/javascript/JS-form-validation'
 let g:netrw_dirhist_4='/Users/danielrobert/Projects/Repositories/open-source/javascript/js-event-utils'
+let g:netrw_dirhist_5='/Users/danielrobert/Projects/WP-Dev/pattern-types-dev/gen-test'
+let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/pattern-types-dev/gen-grid-test'
+let g:netrw_dirhist_7='/Users/danielrobert/Projects/WP-Dev/pattern-types-dev'

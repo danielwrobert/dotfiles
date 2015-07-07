@@ -130,8 +130,6 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 ## PERSONAL ALIASES:
 # Code Editor Shortcuts
 alias mvim='open -a "MacVim"'
-#alias espresso='open -a "Espresso"'
-#alias coda='open -a "Coda"'
 alias sb2='open -a "Sublime Text 2"'
 alias sb='open -a "Sublime Text"'
 alias atom='open -a "Atom"'
@@ -170,5 +168,7 @@ alias svnd="svn diff | colordiff"
 alias cgrep="grep --color=always -rn"
 
 # Node and NPM
+## Update NodeJS via N
+alias node-update="sudo n stable"
 ## Update NPM
 alias npm-update="sudo npm install npm -g"
