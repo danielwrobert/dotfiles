@@ -52,9 +52,17 @@ function parse_git_branch() {
 }
 
 # Original (Mathias) PS1:
-PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+#PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 
-# MY PS1:
+# MY PS1 (Original):
+#PS1="
+#$(tput bold)\[\e[0;34m┌─>\e\] \[${BOLD}${ORANGE}\]\u: \033[01;34m\]\w \[\033[31m\]\`ruby -e \"print (%x{git branch 2> /dev/null}.each_line.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`\[\033[37m\]\[\033[00m\]
+#\[\e[0;34m\]└─>\[\e[0;00m\] \[\033[37m\]$\[$RESET\] "
+
+# MY PS1 (For Dark Color Scheme):
+#PS1="
+#\[${BOLD}${PURPLE}\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[37m\]in \[${BOLD}${PURPLE}\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[${BOLD}${PURPLE}\]└─> \[\033[37m\]$ \[$RESET\]"
+
+# MY PS1 (For Solarized Color Scheme):
 PS1="
-$(tput bold)\[\e[0;34m┌─>\e\] \[${BOLD}${ORANGE}\]\u: \033[01;34m\]\w \[\033[31m\]\`ruby -e \"print (%x{git branch 2> /dev/null}.each_line.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`\[\033[37m\]\[\033[00m\]
-\[\e[0;34m\]└─>\[\e[0;00m\] \[\033[37m\]$\[$RESET\] "
+\[\033[0;36m\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[37m\]in \[\033[0;36m\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[\033[0;36m\]└─> \[\033[37m\]$ \[$RESET\]"

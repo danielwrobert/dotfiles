@@ -1,6 +1,8 @@
-" Set Colorscheme (Railscat theme by Jeff Kreeftmeijer - gVim-only)
+" Set Colorscheme
 " colorscheme railscat
-colorscheme seti
+"colorscheme seti
+set background=dark
+colorscheme solarized
 
 " Better line-height
 set linespace=8

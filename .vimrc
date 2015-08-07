@@ -20,7 +20,9 @@ set foldenable
 " Set Colorscheme
 " let g:hybrid_use_Xresources=1
 " colorscheme flattown
-colorscheme seti
+" colorscheme seti
+set background=dark
+colorscheme solarized
 
 " ####### VIM-CTRL-P Settings: #######
 set runtimepath^=~/.vim/bundle/ctrlp.vim
