@@ -174,6 +174,19 @@ autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 
+" ####### Syntastic Plugin Settings: #######
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" ####### Airline Plugin Settings: #######
+let g:airline#extensions#tabline#enabled = 1
+
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
 let g:jsx_ext_required = 0
@@ -186,4 +199,11 @@ let g:user_emmet_expandabbr_key = '<s-tab>'
 let g:user_emmet_togglecomment_key = '<c-_>'
 "let g:user_emmet_next_key = '<C-,>'
 "let g:user_emmet_prev_key = '<C-;>'
+
+" ####### Toggle Paste Tabs #######
+" Provides visual feedback shown in the status line
+" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+nnoremap <F13> :set invpaste paste?<CR>
+set pastetoggle=<F13>
+set showmode
 
