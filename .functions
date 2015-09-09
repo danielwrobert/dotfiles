@@ -69,3 +69,18 @@ function codepoint() {
 	perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
 	echo # newline
 }
+
+# WP.com-specific shortcut functions - https://themedevp2.wordpress.com/2015/09/09/taking-shortcuts-with-bash_profile/
+#svn shortcut functions
+function expr() {
+	svn export https://premium-review-svn.wordpress.com/$1 $2
+}
+function expub() {
+	svn export https://wpcom-themes.svn.automattic.com/$1 $2
+}
+function copub() {
+	svn co https://wpcom-themes.svn.automattic.com/$1 $2
+}
+function copr() {
+	svn co https://premium-review-svn.wordpress.com/$1 $2
+}

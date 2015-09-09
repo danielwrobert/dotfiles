@@ -185,6 +185,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " ####### Airline Plugin Settings: #######
+" Enables tabline at top to show buffers as tabs:
 let g:airline#extensions#tabline#enabled = 1
 
 " ####### VIM-JSX Settings: #######
