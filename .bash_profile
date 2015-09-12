@@ -78,7 +78,8 @@ function marks {
 # Tab completion for Jump and Unmark commands
 _completemarks() {
   local curw=${COMP_WORDS[COMP_CWORD]}
-  local wordlist=$(find $MARKPATH -type l -printf "%f\n")
+  #local wordlist=$(find $MARKPATH -type l -printf "%f\n")
+  local wordlist=$(find $MARKPATH -type l -exec basename {} \;)
   COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
   return 0
 }
