@@ -3,6 +3,7 @@
 "colorscheme seti
 set background=dark
 colorscheme solarized
+"colorscheme base16-ocean
 
 " Better line-height
 set linespace=8

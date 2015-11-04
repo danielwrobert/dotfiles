@@ -71,7 +71,8 @@ set cursorline
 " Make tabs as wide as two spaces
 " #set tabstop=2
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:\|\ ,trail:·,eol:¬,nbsp:_
 set list
 " Highlight searches
 set hlsearch
@@ -208,3 +209,5 @@ nnoremap <F13> :set invpaste paste?<CR>
 set pastetoggle=<F13>
 set showmode
 
+" ####### Base-16 Color Scheme Accent Color Setting #######
+let base16colorspace=256  " Access colors present in 256 colorspace
