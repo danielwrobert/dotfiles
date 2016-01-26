@@ -24,26 +24,36 @@ Plugin 'mattn/emmet-vim'
 Plugin 'junegunn/goyo.vim'
 " NERD Commenter - https://github.com/scrooloose/nerdcommenter
 Plugin 'scrooloose/nerdcommenter'
-" NERD Tree - https://github.com/scrooloose/nerdtree
-" Plugin 'scrooloose/nerdtree'
 " Syntastic - https://github.com/scrooloose/syntastic
 Plugin 'scrooloose/syntastic'
 " Vim Airline - https://github.com/bling/vim-airline
 Plugin 'bling/vim-airline'
 " Vim BufOnly - https://github.com/schickling/vim-bufonly
 Plugin 'schickling/vim-bufonly'
-" Vim Solarized (Color Scheme) - https://github.com/altercation/vim-colors-solarized
+" Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
 Plugin 'altercation/vim-colors-solarized'
 " Vim EasyMotion - https://github.com/Lokaltog/vim-easymotion
 Plugin 'Lokaltog/vim-easymotion'
-" Vim Surround  - https://github.com/tpope/vim-surround
+" Vim Surround - https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
-" Vim Vinegar  - https://github.com/tpope/vim-vinegar
-" Plugin 'tpope/vim-vinegar'
-" YouCompleteMe  - https://github.com/Valloric/YouCompleteMe
+" YouCompleteMe - https://github.com/Valloric/YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
-" TernJS  - https://github.com/ternjs/tern_for_vim
+" TernJS - https://github.com/ternjs/tern_for_vim
 Plugin 'ternjs/tern_for_vim'
+"
+" Previously installed and removed plugins (keeping listed for now)
+" NERD Tree - https://github.com/scrooloose/nerdtree
+" Plugin 'scrooloose/nerdtree'
+" Vim Vinegar - https://github.com/tpope/vim-vinegar
+" Plugin 'tpope/vim-vinegar'
+" Vim Fugitive - https://github.com/tpope/vim-fugitive
+" Plugin 'tpope/vim-fugitive'
+" Vim JSX - https://github.com/mxw/vim-jsx
+" Plugin 'mxw/vim-jsx'
+" Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
+" Plugin 'chriskempson/base16-vim'
+" Seti (colorscheme) - https://github.com/trusktr/seti
+" Plugin 'trusktr/seti'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
