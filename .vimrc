@@ -42,6 +42,8 @@ Plugin 'tpope/vim-surround'
 " Plugin 'tpope/vim-vinegar'
 " YouCompleteMe  - https://github.com/Valloric/YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
+" TernJS  - https://github.com/ternjs/tern_for_vim
+Plugin 'ternjs/tern_for_vim'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
