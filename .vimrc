@@ -1,6 +1,64 @@
-" ####### Pathogen Initialization #######
-call pathogen#infect()
-call pathogen#helptags()
+" ####### Begin Vundle Configuration #######
+" First you need to install Vundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set nocompatible     " be iMproved, required
+filetype off         " required
+"
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+"
+" Additional plugins
+" Keep Plugin commands between vundle#begin/end.
+" CTRL+P - https://github.com/ctrlpvim/ctrlp.vim
+Plugin 'ctrlpvim/ctrlp.vim'
+" Editorconfig - https://github.com/editorconfig/editorconfig-vim
+Plugin 'editorconfig/editorconfig-vim'
+" Emmet Vim - https://github.com/mattn/emmet-vim
+Plugin 'mattn/emmet-vim'
+" GoYo - https://github.com/junegunn/goyo.vim
+Plugin 'junegunn/goyo.vim'
+" NERD Commenter - https://github.com/scrooloose/nerdcommenter
+Plugin 'scrooloose/nerdcommenter'
+" NERD Tree - https://github.com/scrooloose/nerdtree
+" Plugin 'scrooloose/nerdtree'
+" Syntastic - https://github.com/scrooloose/syntastic
+Plugin 'scrooloose/syntastic'
+" Vim Airline - https://github.com/bling/vim-airline
+Plugin 'bling/vim-airline'
+" Vim BufOnly - https://github.com/schickling/vim-bufonly
+Plugin 'schickling/vim-bufonly'
+" Vim Solarized (Color Scheme) - https://github.com/altercation/vim-colors-solarized
+Plugin 'altercation/vim-colors-solarized'
+" Vim EasyMotion - https://github.com/Lokaltog/vim-easymotion
+Plugin 'Lokaltog/vim-easymotion'
+" Vim Surround  - https://github.com/tpope/vim-surround
+Plugin 'tpope/vim-surround'
+" Vim Vinegar  - https://github.com/tpope/vim-vinegar
+" Plugin 'tpope/vim-vinegar'
+" YouCompleteMe  - https://github.com/Valloric/YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" "filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" ####### End Vundle Configuration #######
 
 
 " ####### From MacVim Nettuts Video 1 (added 6.6.13): #######
@@ -191,8 +249,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
-let g:jsx_ext_required = 0
-let g:jsx_pragma_required = 1
+" let g:jsx_ext_required = 0
+" let g:jsx_pragma_required = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
 " adding zen coding (http://code.google.com/p/zen-coding/ ) support
