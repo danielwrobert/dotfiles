@@ -265,12 +265,12 @@ let g:airline#extensions#tabline#enabled = 1
 " let g:jsx_pragma_required = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
-" adding zen coding (http://code.google.com/p/zen-coding/ ) support
-let g:user_emmet_leader_key = '<C-n>'
-let g:user_emmet_expandabbr_key = '<s-tab>'
-let g:user_emmet_togglecomment_key = '<c-_>'
-"let g:user_emmet_next_key = '<C-,>'
-"let g:user_emmet_prev_key = '<C-;>'
+" let g:user_emmet_leader_key = '<C-n>'
+let g:user_emmet_leader_key='<C-Z>'
+" let g:user_emmet_expandabbr_key = '<s-tab>'
+" let g:user_emmet_togglecomment_key = '<c-_>'
+" let g:user_emmet_next_key = '<C-,>'
+" let g:user_emmet_prev_key = '<C-;>'
 
 " ####### Toggle Paste Tabs #######
 " Provides visual feedback shown in the status line
