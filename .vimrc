@@ -20,8 +20,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 " Emmet Vim - https://github.com/mattn/emmet-vim
 Plugin 'mattn/emmet-vim'
-" GoYo - https://github.com/junegunn/goyo.vim
-Plugin 'junegunn/goyo.vim'
 " NERD Commenter - https://github.com/scrooloose/nerdcommenter
 Plugin 'scrooloose/nerdcommenter'
 " Syntastic - https://github.com/scrooloose/syntastic
@@ -40,6 +38,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 " TernJS - https://github.com/ternjs/tern_for_vim
 Plugin 'ternjs/tern_for_vim'
+" Vim JSX - https://github.com/mxw/vim-jsx
+Plugin 'mxw/vim-jsx'
 "
 " Previously installed and removed plugins (keeping listed for now)
 " NERD Tree - https://github.com/scrooloose/nerdtree
@@ -48,12 +48,12 @@ Plugin 'ternjs/tern_for_vim'
 " Plugin 'tpope/vim-vinegar'
 " Vim Fugitive - https://github.com/tpope/vim-fugitive
 " Plugin 'tpope/vim-fugitive'
-" Vim JSX - https://github.com/mxw/vim-jsx
-" Plugin 'mxw/vim-jsx'
 " Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
 " Plugin 'chriskempson/base16-vim'
 " Seti (colorscheme) - https://github.com/trusktr/seti
 " Plugin 'trusktr/seti'
+" GoYo (Distraction free mode for md editing) - https://github.com/junegunn/goyo.vim
+" Plugin 'junegunn/goyo.vim'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
