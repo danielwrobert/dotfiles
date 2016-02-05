@@ -1,10 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk/src'
-let g:netrw_dirhist_2='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk/src/styles'
-let g:netrw_dirhist_3='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk/src/styles/partials'
-let g:netrw_dirhist_4='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk'
-let g:netrw_dirhist_5='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk/inc'
-let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk'
-let g:netrw_dirhist_7='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk/inc'
-let g:netrw_dirhist_8='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/mishtalk'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/danielrobert/Projects/Repositories/labs/javascript/egghead-react-app/app'
+let g:netrw_dirhist_2='/Users/danielrobert/Projects/Repositories/labs/javascript/egghead-react-app/app/components'
+let g:netrw_dirhist_3='/Users/danielrobert/Projects/Repositories/labs/javascript/egghead-react-app/app/components/GitHub'
+let g:netrw_dirhist_4='/Users/danielrobert/Projects/Repositories/open-source/dotfiles'

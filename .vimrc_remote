@@ -1,5 +1,45 @@
-" Pathogen Initialization
-execute pathogen#infect()
+" Vundle Configuration
+" First you need to install Vundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set nocompatible     " be iMproved, required
+filetype off         " required
+"
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+"
+" Additional plugins
+" Keep Plugin commands between vundle#begin/end.
+" CTRL+P - https://github.com/ctrlpvim/ctrlp.vim
+Plugin 'ctrlpvim/ctrlp.vim'
+" Editorconfig - https://github.com/editorconfig/editorconfig-vim
+Plugin 'editorconfig/editorconfig-vim'
+" Emmet Vim - https://github.com/mattn/emmet-vim
+Plugin 'mattn/emmet-vim'
+" NERD Commenter - https://github.com/scrooloose/nerdcommenter
+Plugin 'scrooloose/nerdcommenter'
+" Syntastic - https://github.com/scrooloose/syntastic
+Plugin 'scrooloose/syntastic'
+" Vim Airline - https://github.com/bling/vim-airline
+Plugin 'bling/vim-airline'
+" Vim BufOnly - https://github.com/schickling/vim-bufonly
+Plugin 'schickling/vim-bufonly'
+" Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
+Plugin 'altercation/vim-colors-solarized'
+" Vim EasyMotion - https://github.com/Lokaltog/vim-easymotion
+Plugin 'Lokaltog/vim-easymotion'
+" Vim Surround - https://github.com/tpope/vim-surround
+Plugin 'tpope/vim-surround'
+" YouCompleteMe - https://github.com/Valloric/YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+" TernJS - https://github.com/ternjs/tern_for_vim
+Plugin 'ternjs/tern_for_vim'
+" Vim JSX - https://github.com/mxw/vim-jsx
+Plugin 'mxw/vim-jsx'
 
 " Set tabs to 4 spaces
 set tabstop=4
@@ -21,7 +61,8 @@ set foldenable
 syntax on
 
 " Set colorscheme
-colorscheme flattown
+set background=dark
+colorscheme solarized
 
 " Enable line numbers
 set number
