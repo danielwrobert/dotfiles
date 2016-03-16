@@ -24,8 +24,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 " Syntastic - https://github.com/scrooloose/syntastic
 Plugin 'scrooloose/syntastic'
-" Vim Airline - https://github.com/bling/vim-airline
-Plugin 'bling/vim-airline'
+" Vim Airline - https://github.com/vim-airline/vim-airline
+Plugin 'vim-airline/vim-airline'
+" Vim Airline Themes - https://github.com/vim-airline/vim-airline-themes
+Plugin 'vim-airline/vim-airline-themes'
 " Vim BufOnly - https://github.com/schickling/vim-bufonly
 Plugin 'schickling/vim-bufonly'
 " Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
@@ -40,14 +42,16 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ternjs/tern_for_vim'
 " Vim JSX - https://github.com/mxw/vim-jsx
 Plugin 'mxw/vim-jsx'
+" Vim Mustache Handlebars - https://github.com/mustache/vim-mustache-handlebars
+Plugin 'mustache/vim-mustache-handlebars'
 "
 " Previously installed and removed plugins (keeping listed for now)
 " NERD Tree - https://github.com/scrooloose/nerdtree
 " Plugin 'scrooloose/nerdtree'
-" Vim Vinegar - https://github.com/tpope/vim-vinegar
-" Plugin 'tpope/vim-vinegar'
 " Vim Fugitive - https://github.com/tpope/vim-fugitive
 " Plugin 'tpope/vim-fugitive'
+" Vim Vinegar - https://github.com/tpope/vim-vinegar
+" Plugin 'tpope/vim-vinegar'
 " Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
 " Plugin 'chriskempson/base16-vim'
 " Seti (colorscheme) - https://github.com/trusktr/seti
@@ -261,8 +265,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
-" let g:jsx_ext_required = 0
-" let g:jsx_pragma_required = 1
+let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
 " let g:user_emmet_leader_key = '<C-n>'

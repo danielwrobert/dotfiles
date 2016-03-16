@@ -24,8 +24,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
 " Syntastic - https://github.com/scrooloose/syntastic
 Plugin 'scrooloose/syntastic'
-" Vim Airline - https://github.com/bling/vim-airline
-Plugin 'bling/vim-airline'
+" Vim Airline - https://github.com/vim-airline/vim-airline
+Plugin 'vim-airline/vim-airline'
+" Vim Airline Themes - https://github.com/vim-airline/vim-airline-themes
+Plugin 'vim-airline/vim-airline-themes'
 " Vim BufOnly - https://github.com/schickling/vim-bufonly
 Plugin 'schickling/vim-bufonly'
 " Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
@@ -34,12 +36,13 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 " Vim Surround - https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
-" YouCompleteMe - https://github.com/Valloric/YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-" TernJS - https://github.com/ternjs/tern_for_vim
-Plugin 'ternjs/tern_for_vim'
 " Vim JSX - https://github.com/mxw/vim-jsx
 Plugin 'mxw/vim-jsx'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 " Set tabs to 4 spaces
 set tabstop=4
@@ -74,7 +77,7 @@ set cursorline
 set nostartofline
 
 " Show invisible characters
-set listchars=eol:~,tab:>-,trail:*
+set listchars=eol:~,tab:\|\ ,trail:*
 set list
 
 " Show the cursor position
