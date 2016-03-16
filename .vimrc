@@ -40,8 +40,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 " TernJS - https://github.com/ternjs/tern_for_vim
 Plugin 'ternjs/tern_for_vim'
-" Vim JSX - https://github.com/mxw/vim-jsx
-Plugin 'mxw/vim-jsx'
 " Vim Mustache Handlebars - https://github.com/mustache/vim-mustache-handlebars
 Plugin 'mustache/vim-mustache-handlebars'
 "
@@ -58,6 +56,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Plugin 'trusktr/seti'
 " GoYo (Distraction free mode for md editing) - https://github.com/junegunn/goyo.vim
 " Plugin 'junegunn/goyo.vim'
+" Vim JSX - https://github.com/mxw/vim-jsx
+" Plugin 'mxw/vim-jsx'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -265,8 +265,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
-let g:jsx_ext_required = 0
-let g:jsx_pragma_required = 1
+"let g:jsx_ext_required = 0
+"let g:jsx_pragma_required = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
 " let g:user_emmet_leader_key = '<C-n>'

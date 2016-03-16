@@ -36,8 +36,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 " Vim Surround - https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
-" Vim JSX - https://github.com/mxw/vim-jsx
-Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
