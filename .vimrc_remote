@@ -113,7 +113,7 @@ set showcmd
 set scrolloff=3
 
 " Add the g flag to search/replace by default
-set gdefault
+" set gdefault
 
 " Change mapleader
 let mapleader=','

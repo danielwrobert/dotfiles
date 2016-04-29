@@ -47,6 +47,9 @@ export PATH=/usr/local/mysql/bin:$PATH
 ## Not needed - seems to be causeing an error in OSX 10.8+ .. commenting out for now
 #export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/mysql/lib/
 
+## PHP CLI version (via Homebrew)
+#export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+
 # WP-CLI directory (Set when using MAMP)
 #export PATH=/Users/danielrobert/.wp-cli/bin:$PATH
 #export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.5.9/bin/php

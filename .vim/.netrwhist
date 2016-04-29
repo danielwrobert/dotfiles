@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/danielrobert/Projects/Repositories/open-source/dotfiles'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/danielrobert/Projects/Repositories'
+let g:netrw_dirhist_2='/Users/danielrobert/Projects/WP-Dev/area51/wertco/content/themes/wert-and-company'
+let g:netrw_dirhist_3='/Users/danielrobert/Projects/WP-Dev/area51/wertco/content/themes/wert-and-company/inc'
+let g:netrw_dirhist_4='/Users/danielrobert/Projects/WP-Dev/area51/wertco/content/themes/wert-and-company'
+let g:netrw_dirhist_5='/Users/danielrobert/Projects/Repositories/open-source/dotfiles'
