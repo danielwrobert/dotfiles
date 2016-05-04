@@ -134,6 +134,9 @@ alias sb2='open -a "Sublime Text 2"'
 alias sb='open -a "Sublime Text"'
 alias atom='open -a "Atom"'
 
+# Ngrok - exposes local port to share temporarily
+alias ngrok='~/Dev-Tools/ngrok/ngrok'
+
 # FLush System DNS Cache
 alias flushdns='sudo dscacheutil -flushcache'
 
