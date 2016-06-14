@@ -165,7 +165,7 @@ set nostartofline
 " Show the cursor position
 set ruler
 " Don’t show the intro message when starting Vim
-set shortmess=atI
+"set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
@@ -262,6 +262,7 @@ let g:syntastic_check_on_wq = 0
 " ####### Airline Plugin Settings: #######
 " Enables tabline at top to show buffers as tabs:
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
