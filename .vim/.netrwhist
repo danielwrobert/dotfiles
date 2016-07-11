@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/area51/freersackler/freersackler/content/themes/freersackler'
-let g:netrw_dirhist_2='/Users/danielrobert'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/danielrobert/Dropbox (Personal)/Projects/Playpen/JavaScript/codeschool-es2015-forum-app/src'
+let g:netrw_dirhist_2='/Users/danielrobert/Dropbox (Personal)/Projects/Playpen/JavaScript/codeschool-es2015-forum-app'
+let g:netrw_dirhist_3='/Users/danielrobert/Dropbox (Personal)/Projects/Playpen/JavaScript/codeschool-es2015-forum-app/src'
+let g:netrw_dirhist_4='/Users/danielrobert/Dropbox (Personal)/Projects/Playpen/JavaScript/codeschool-es2015-forum-app'
+let g:netrw_dirhist_5='/Users/danielrobert/Dropbox (Personal)/Projects/Playpen/JavaScript/codeschool-es2015-forum-app/src'
+let g:netrw_dirhist_6='/Users/danielrobert/Dropbox (Personal)/Projects/Playpen/JavaScript/codeschool-es2015-forum-app'
+let g:netrw_dirhist_7='/Users/danielrobert/Dropbox (Personal)/Projects/Playpen/JavaScript/codeschool-es2015-forum-app/src'

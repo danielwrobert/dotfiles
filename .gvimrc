@@ -8,7 +8,7 @@ colorscheme solarized
 " Better line-height
 set linespace=8
 " Set font styles
-set guifont=Menlo:h14
+set guifont=Menlo\ for\ Powerline:h14
 if has("gui_macvim")
 	" In MacVim, you can have multiple tabs open. This mapping makes Ctrl-Tab
 	" switch between them, like browser tabs. Ctrl-Shift-Tab goes the other way.

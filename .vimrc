@@ -172,6 +172,9 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+" Open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitbelow
+set splitright
 " Use relative line numbers
 if exists("&relativenumber")
 	set relativenumber
