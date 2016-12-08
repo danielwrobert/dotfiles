@@ -1,0 +1,10 @@
+# Ignore Vim files specific to this directory
+
+# Ignore all bundles except for Vundle.
+# Installs are managed by the Vundle plugin.
+!bundle/
+bundle/*
+!bundle/Vundle.vim
+
+# Ignore swap files
+swaps/*
