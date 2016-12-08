@@ -208,8 +208,8 @@ filetype plugin on
 
 " ####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
 " ####### Command Remappings: #######
-nnoremap <leader><tab> :NERDTree<CR>
-let g:NERDTreeDirArrows=0
+" nnoremap <leader><tab> :NERDTree<CR>
+" let g:NERDTreeDirArrows=0
 
 " ##### Window Navagation #####
 " Quicker Window Switching
@@ -274,8 +274,9 @@ let g:airline_powerline_fonts = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
 " let g:user_emmet_leader_key = '<C-n>'
-let g:user_emmet_leader_key='<C-Z>'
-" let g:user_emmet_expandabbr_key = '<s-tab>'
+" let g:user_emmet_leader_key='<C-Z>'
+ "let g:user_emmet_expandabbr_key = '<S-Tab>'
+imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " let g:user_emmet_togglecomment_key = '<c-_>'
 " let g:user_emmet_next_key = '<C-,>'
 " let g:user_emmet_prev_key = '<C-;>'
@@ -283,9 +284,9 @@ let g:user_emmet_leader_key='<C-Z>'
 " ####### Toggle Paste Tabs #######
 " Provides visual feedback shown in the status line
 " http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
-nnoremap <F13> :set invpaste paste?<CR>
-set pastetoggle=<F13>
-set showmode
+"nnoremap <F13> :set invpaste paste?<CR>
+"set pastetoggle=<F13>
+"set showmode
 
 " ####### Base-16 Color Scheme Accent Color Setting #######
 let base16colorspace=256  " Access colors present in 256 colorspace

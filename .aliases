@@ -146,11 +146,13 @@ alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/
 # MAMP MySQL
 alias mamp-mysql="/Applications/MAMP/Library/bin/mysql -u root -p"
 
-# Root MySQL
+# Root/System MySQL
+# Note: This has since been uninstalled in favor of taking the
+# Homebrew approach. Will eventually deletel these lines altogether.
 ## START MySQL
-alias start-mysql="sudo /usr/local/mysql/support-files/mysql.server start"
+#alias start-mysql="sudo /usr/local/mysql/support-files/mysql.server start"
 ## STOP MySQL
-alias stop-mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
+#alias stop-mysql="sudo /usr/local/mysql/support-files/mysql.server stop"
 
 # Root Apache
 ## START Apache
