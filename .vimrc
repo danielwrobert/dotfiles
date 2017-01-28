@@ -2,16 +2,16 @@
 " First you need to install Vundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set nocompatible     " be iMproved, required
 filetype off         " required
-"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-"
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"
+
 " Additional plugins
 " Keep Plugin commands between vundle#begin/end.
 " CTRL+P - https://github.com/ctrlpvim/ctrlp.vim
@@ -36,20 +36,20 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 " Vim Surround - https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
+" Vim Vinegar - https://github.com/tpope/vim-vinegar
+Plugin 'tpope/vim-vinegar'
 " YouCompleteMe - https://github.com/Valloric/YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 " TernJS - https://github.com/ternjs/tern_for_vim
 Plugin 'ternjs/tern_for_vim'
 " Vim Mustache Handlebars - https://github.com/mustache/vim-mustache-handlebars
 Plugin 'mustache/vim-mustache-handlebars'
-"
+
 " Previously installed and removed plugins (keeping listed for now)
 " NERD Tree - https://github.com/scrooloose/nerdtree
 " Plugin 'scrooloose/nerdtree'
 " Vim Fugitive - https://github.com/tpope/vim-fugitive
 " Plugin 'tpope/vim-fugitive'
-" Vim Vinegar - https://github.com/tpope/vim-vinegar
-" Plugin 'tpope/vim-vinegar'
 " Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
 " Plugin 'chriskempson/base16-vim'
 " Seti (colorscheme) - https://github.com/trusktr/seti
@@ -274,9 +274,9 @@ let g:airline_powerline_fonts = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
 " let g:user_emmet_leader_key = '<C-n>'
-" let g:user_emmet_leader_key='<C-Z>'
- "let g:user_emmet_expandabbr_key = '<S-Tab>'
-imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_leader_key='<C-Z>'
+" let g:user_emmet_expandabbr_key = '<S-Tab>'
+" imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " let g:user_emmet_togglecomment_key = '<c-_>'
 " let g:user_emmet_next_key = '<C-,>'
 " let g:user_emmet_prev_key = '<C-;>'

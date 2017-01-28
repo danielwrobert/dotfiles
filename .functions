@@ -70,17 +70,13 @@ function codepoint() {
 	echo # newline
 }
 
-# WP.com-specific shortcut functions - https://themedevp2.wordpress.com/2015/09/09/taking-shortcuts-with-bash_profile/
-#svn shortcut functions
-function expr() {
-	svn export https://premium-review-svn.wordpress.com/$1 $2
+# Set auto-complete for `screen -r` command
+function _complete_scr() {
+    local does_screen_exist=$(type -t _screen_sessions)
+    local cur=$2 # Needed by _screen_sessions
+    if [[ "function" = "${does_screen_exist}" ]]; then
+        _screen_sessions "Detached"
+    fi
 }
-function expub() {
-	svn export https://wpcom-themes.svn.automattic.com/$1 $2
-}
-function copub() {
-	svn co https://wpcom-themes.svn.automattic.com/$1 $2
-}
-function copr() {
-	svn co https://premium-review-svn.wordpress.com/$1 $2
-}
+export -f _complete_scr
+complete -F _complete_scr -o default scr

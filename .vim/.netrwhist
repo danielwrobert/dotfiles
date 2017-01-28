@@ -1,9 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/area51/area51-valet/freersackler/wp-content'
-let g:netrw_dirhist_2='/Users/danielrobert/Projects/WP-Dev/area51/area51-valet/freersackler'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Wes-Bos/Learning-Redux/reduxstagram/client/components'
+let g:netrw_dirhist_2='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Wes-Bos/Learning-Redux/reduxstagram/client'
 let g:netrw_dirhist_3='/Users/danielrobert/Projects/WP-Dev/area51/area51-valet/freersackler/wp-content/themes/freersackler'
-let g:netrw_dirhist_4='/Users/danielrobert/Projects/WP-Dev/area51/area51-valet/joelonsoftware/wp-content/themes/joelonsoftware'
-let g:netrw_dirhist_5='/Users/danielrobert/Projects/WP-Dev/wordpress-trunk'
-let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/wp-trunk-test'
-let g:netrw_dirhist_7='/Users/danielrobert/Projects/WP-Dev/wp-trunk-chassis-test'
+let g:netrw_dirhist_4='/Users/danielrobert/Projects/WP-Dev/area51/area51-valet/freersackler/wp-content/themes/freersackler/inc'
+let g:netrw_dirhist_5='/Users/danielrobert/Projects/WP-Dev/area51/area51-valet/freersackler/wp-content/themes/freersackler/inc/custom-post-types'
+let g:netrw_dirhist_6='/Users/danielrobert'

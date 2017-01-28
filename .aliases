@@ -20,6 +20,7 @@ alias s="sb ."
 alias s2="sb2 ."
 alias o="open"
 alias oo="open ."
+alias scr="screen -r"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
