@@ -69,14 +69,3 @@ function codepoint() {
 	perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
 	echo # newline
 }
-
-# Set auto-complete for `screen -r` command
-function _complete_scr() {
-    local does_screen_exist=$(type -t _screen_sessions)
-    local cur=$2 # Needed by _screen_sessions
-    if [[ "function" = "${does_screen_exist}" ]]; then
-        _screen_sessions "Detached"
-    fi
-}
-export -f _complete_scr
-complete -F _complete_scr -o default scr
