@@ -54,6 +54,10 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Plugin 'chriskempson/base16-vim'
 " Seti (colorscheme) - https://github.com/trusktr/seti
 " Plugin 'trusktr/seti'
+" Vim Dracula (colorscheme) - https://github.com/dracula/vim
+" Plugin 'dracula/vim'
+" Vim Darcula (colorscheme) - https://github.com/blueshirts/darcula
+" Plugin 'blueshirts/darcula'
 " GoYo (Distraction free mode for md editing) - https://github.com/junegunn/goyo.vim
 " Plugin 'junegunn/goyo.vim'
 " Vim JSX - https://github.com/mxw/vim-jsx
@@ -93,9 +97,9 @@ set wildmode=list:longest
 set foldenable
 " Set Colorscheme
 " let g:hybrid_use_Xresources=1
-" colorscheme flattown
-" colorscheme seti
-set background=dark
+let g:airline_theme='solarized'
+"set background=dark
+set background=light
 colorscheme solarized
 
 " ####### VIM-CTRL-P Settings: #######
