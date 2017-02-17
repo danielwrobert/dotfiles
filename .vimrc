@@ -44,6 +44,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ternjs/tern_for_vim'
 " Vim Mustache Handlebars - https://github.com/mustache/vim-mustache-handlebars
 Plugin 'mustache/vim-mustache-handlebars'
+" Vim JavaScript - https://github.com/pangloss/vim-javascript
+Plugin 'pangloss/vim-javascript'
+" Vim JSX - https://github.com/mxw/vim-jsx
+Plugin 'mxw/vim-jsx'
 
 " Previously installed and removed plugins (keeping listed for now)
 " NERD Tree - https://github.com/scrooloose/nerdtree
@@ -60,15 +64,13 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Plugin 'blueshirts/darcula'
 " GoYo (Distraction free mode for md editing) - https://github.com/junegunn/goyo.vim
 " Plugin 'junegunn/goyo.vim'
-" Vim JSX - https://github.com/mxw/vim-jsx
-" Plugin 'mxw/vim-jsx'
-"
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 " "filetype plugin on
-"
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just
@@ -76,7 +78,7 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to
 " auto-approve removal
-"
+
 " see :h vundle for more details or wiki for FAQ
 " ####### End Vundle Configuration #######
 
@@ -273,7 +275,7 @@ let g:airline_powerline_fonts = 1
 
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
-"let g:jsx_ext_required = 0
+let g:jsx_ext_required = 0
 "let g:jsx_pragma_required = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######

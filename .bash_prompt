@@ -65,7 +65,7 @@ function parse_git_branch() {
 
 # MY PS1 (For Solarized Light Color Scheme):
 PS1="
-\[\033[0;36m\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[1;30m\]in \[\033[0;36m\]\w\[\033[1;30m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[\033[0;36m\]└─> \[\033[1;30m\]$ \[$RESET\]"
+\[\033[0;36m\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[0;30m\]in \[\033[0;36m\]\w\[\033[0;30m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[\033[0;36m\]└─> \[\033[0;30m\]$ \[$RESET\]"
 
 # MY PS1 (For Solarized Dark Color Scheme):
 #PS1="
