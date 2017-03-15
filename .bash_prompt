@@ -63,10 +63,10 @@ function parse_git_branch() {
 #PS1="
 #\[${BOLD}${PURPLE}\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[37m\]in \[$PURPLE\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[${BOLD}${PURPLE}\]└─> \[\033[37m\]$ \[$RESET\]"
 
-# MY PS1 (For Solarized Light Color Scheme):
-PS1="
-\[\033[0;36m\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[0;30m\]in \[\033[0;36m\]\w\[\033[0;30m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[\033[0;36m\]└─> \[\033[0;30m\]$ \[$RESET\]"
-
-# MY PS1 (For Solarized Dark Color Scheme):
+# MY PS1 (For Light Color Scheme):
 #PS1="
-#\[\033[0;36m\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[37m\]in \[\033[0;36m\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[\033[0;36m\]└─> \[\033[37m\]$ \[$RESET\]"
+#\[\033[0;36m\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[0;30m\]in \[\033[0;36m\]\w\[\033[0;30m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[\033[0;36m\]└─> \[\033[0;30m\]$ \[$RESET\]"
+
+# MY PS1 (For Dark Color Scheme):
+PS1="
+\[\033[0;36m\]┌─> \[${BOLD}${ORANGE}\]\u: \[\033[37m\]in \[\033[0;36m\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(parse_git_branch)\n\[\033[0;36m\]└─> \[\033[37m\]$ \[$RESET\]"

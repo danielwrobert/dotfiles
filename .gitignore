@@ -14,6 +14,9 @@ Thumbs.db
 *.sublime-workspace
 *.sublime-project
 
+# PhpStorm Project Files
+*.idea/
+
 # Sass Files
 *.sass-cache/
 

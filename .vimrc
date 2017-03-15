@@ -34,6 +34,8 @@ Plugin 'schickling/vim-bufonly'
 Plugin 'altercation/vim-colors-solarized'
 " Vim EasyMotion - https://github.com/Lokaltog/vim-easymotion
 Plugin 'Lokaltog/vim-easymotion'
+" Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
+Plugin 'chriskempson/base16-vim'
 " Vim Surround - https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
 " Vim Vinegar - https://github.com/tpope/vim-vinegar
@@ -54,8 +56,6 @@ Plugin 'mxw/vim-jsx'
 " Plugin 'scrooloose/nerdtree'
 " Vim Fugitive - https://github.com/tpope/vim-fugitive
 " Plugin 'tpope/vim-fugitive'
-" Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
-" Plugin 'chriskempson/base16-vim'
 " Seti (colorscheme) - https://github.com/trusktr/seti
 " Plugin 'trusktr/seti'
 " Vim Dracula (colorscheme) - https://github.com/dracula/vim
@@ -99,10 +99,19 @@ set wildmode=list:longest
 set foldenable
 " Set Colorscheme
 " let g:hybrid_use_Xresources=1
-let g:airline_theme='solarized'
+" Setup for Solarized Color Schemes:
+"let g:airline_theme='solarized'
 "set background=dark
-set background=light
-colorscheme solarized
+"set background=light
+"colorscheme solarized
+" Setup for Base16 Color Schemes:
+if filereadable(expand("~/.vimrc_background"))
+  "let base16colorspace=256 " Access colors present in 256 colorspace - not
+  "needed for iTerm2
+  source ~/.vimrc_background
+endif
+let g:airline_theme='base16_ocean'
+colorscheme base16-ocean
 
 " ####### VIM-CTRL-P Settings: #######
 set runtimepath^=~/.vim/bundle/ctrlp.vim

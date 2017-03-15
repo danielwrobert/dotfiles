@@ -180,3 +180,7 @@ alias cgrep="grep --color=always -rn"
 alias node-update="sudo n stable"
 ## Update NPM
 alias npm-update="sudo npm install npm -g"
+
+# Docker Aliases
+## Run WP-CLI
+alias dwp="docker-compose run --rm wpcli"
