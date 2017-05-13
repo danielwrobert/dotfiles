@@ -2,16 +2,16 @@
 " First you need to install Vundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set nocompatible     " be iMproved, required
 filetype off         " required
-"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-"
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"
+
 " Additional plugins
 " Keep Plugin commands between vundle#begin/end.
 " CTRL+P - https://github.com/ctrlpvim/ctrlp.vim
@@ -30,17 +30,21 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Vim BufOnly - https://github.com/schickling/vim-bufonly
 Plugin 'schickling/vim-bufonly'
-" Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
+" Vim Solarized - https://github.com/altercation/vim-colors-solarized
 Plugin 'altercation/vim-colors-solarized'
+" Vim Seti - https://github.com/trusktr/seti.vim
+"Plugin 'trusktr/seti.vim'
 " Vim EasyMotion - https://github.com/Lokaltog/vim-easymotion
 Plugin 'Lokaltog/vim-easymotion'
+" Vim Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
+Plugin 'chriskempson/base16-vim'
+
 " Vim Surround - https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
 
 " Set tabs to 4 spaces
 set tabstop=4
@@ -62,8 +66,14 @@ set foldenable
 syntax on
 
 " Set colorscheme
-set background=dark
-colorscheme solarized
+if filereadable(expand("~/.vim_background"))
+  source ~/.vim_background
+endif
+"set background=dark
+let g:airline_theme='base16_ocean'
+colorscheme base16-ocean
+"colorscheme seti
+
 
 " Enable line numbers
 set number
@@ -83,7 +93,33 @@ set ruler
 
 " Show current mode
 set showmode
-
+" Make Vim more useful
+set nocompatible
+" Use the OS clipboard by default on versions compiled with `+clipboard`
+set clipboard=unnamed
+" Enhance command-line completion
+set wildmenu
+" Allow cursor keys in insert mode
+set esckeys
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+" Optimize for fast terminal connections
+set ttyfast
+" Add the g flag to search/replace by default
+set gdefault
+" Use UTF-8 without BOM
+set encoding=utf-8 nobomb
+" Change mapleader
+let mapleader=","
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
 " Respect modeline in files
 set modeline
 set modelines=4
@@ -113,7 +149,7 @@ set showcmd
 set scrolloff=3
 
 " Add the g flag to search/replace by default
-" set gdefault
+set gdefault
 
 " Change mapleader
 let mapleader=','
@@ -151,9 +187,10 @@ map <c-h> <c-w>h
 filetype plugin on
 
 " Emmet settings and remappings
-let g:user_emmet_leader_key = '<C-n>'
-let g:uder_emmet_expandabbr_key = '<s-tab>'
-let g:user_emmet_togglecomment_key = '<c-_>'
+let g:user_emmet_leader_key = '<C-Z>'
+"let g:user_emmet_leader_key = '<C-n>'
+"let g:uder_emmet_expandabbr_key = '<s-tab>'
+"let g:user_emmet_togglecomment_key = '<c-_>'
 
 " NERDTree settings
 noremap <leader><tab> :NERDTree<CR>
@@ -173,14 +210,28 @@ if has("autocmd")
 	autocmd FileType html,css,scss,javascript,php inoremap <buffer> {<CR> {<CR>}<Esc>O
 	autocmd FileType htmldjango inoremap <buffer> {{ {{<space><space>}}<Left><Left><Left>
 	autocmd FileType htmldjango inoremap <buffer> {% {%<space><space>%}<Left><Left><Left>
-	
+
 	"add auto-close parenthesis
 	autocmd FileType html,css,scss,javascript,php inoremap <buffer> ( ()<Left>
 
 	"add auto-close brackets
 	autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []<Left>
 
-	""add auto-close quotes
+	"add auto-close quotes
 	autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
 	autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 endif
+
+" Syntastic settingSyntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Vim-Airline settings
+let g:airline#extensions#tabline#enabled = 1
+
