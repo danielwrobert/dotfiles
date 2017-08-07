@@ -9,6 +9,8 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+let g:ycm_confirm_extra_conf = 0
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -50,6 +52,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 " Vim JSX - https://github.com/mxw/vim-jsx
 Plugin 'mxw/vim-jsx'
+" Vim Jade/Pug - https://github.com/digitaltoad/vim-pug
+Plugin 'digitaltoad/vim-pug'
 
 " Previously installed and removed plugins (keeping listed for now)
 " NERD Tree - https://github.com/scrooloose/nerdtree
@@ -282,6 +286,10 @@ let g:syntastic_check_on_wq = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+" ####### CTRL-P Settings: #######
+" Ignores un-necessary files/directories from search
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist|public)|(\.(swp|hg|git|svn))$'
+
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
 let g:jsx_ext_required = 0
@@ -305,3 +313,7 @@ let g:user_emmet_leader_key='<C-Z>'
 
 " ####### Base-16 Color Scheme Accent Color Setting #######
 let base16colorspace=256  " Access colors present in 256 colorspace
+
+" ####### YouCompleteMe Settings: #######
+" Allows you to yse Ctrl+]
+map <C-]> :YcmCompleter GoToImprecise<CR>

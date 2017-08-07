@@ -1,2 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/vip/mishtalk/src/styles/partials'
+let g:netrw_dirhist_2='/Users/danielrobert/Projects/Repositories/bookmarkpress/wordpress/wp-content/themes/bookmarkpress'
+let g:netrw_dirhist_3='/Users/danielrobert/Projects/Repositories/bookmarkpress/wordpress/wp-content/themes'
+let g:netrw_dirhist_4='/Users/danielrobert/Projects/Repositories/bookmarkpress/wordpress/wp-content/themes/escutcheon'

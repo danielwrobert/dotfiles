@@ -23,5 +23,8 @@ Thumbs.db
 # Project Resource Folders
 *_resources/
 
+# Dandilion Config Files
+*dandelion.yml
+
 # Django project local settings files
 *dan_settings.py
