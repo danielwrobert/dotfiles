@@ -106,7 +106,13 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+#PATH="/usr/local/Cellar/python/2.7.13_1:${PATH}"
 export PATH
+
+## PYENV - https://github.com/pyenv/pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 ## RUBY
 # RVM for easy Ruby installation

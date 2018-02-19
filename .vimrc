@@ -9,8 +9,6 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-let g:ycm_confirm_extra_conf = 0
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -43,9 +41,9 @@ Plugin 'tpope/vim-surround'
 " Vim Vinegar - https://github.com/tpope/vim-vinegar
 Plugin 'tpope/vim-vinegar'
 " YouCompleteMe - https://github.com/Valloric/YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 " TernJS - https://github.com/ternjs/tern_for_vim
-Plugin 'ternjs/tern_for_vim'
+"Plugin 'ternjs/tern_for_vim'
 " Vim Mustache Handlebars - https://github.com/mustache/vim-mustache-handlebars
 Plugin 'mustache/vim-mustache-handlebars'
 " Vim JavaScript - https://github.com/pangloss/vim-javascript
@@ -54,6 +52,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " Vim Jade/Pug - https://github.com/digitaltoad/vim-pug
 Plugin 'digitaltoad/vim-pug'
+" Vim Vue - https://github.com/posva/vim-vue
+Plugin 'posva/vim-vue'
 
 " Previously installed and removed plugins (keeping listed for now)
 " NERD Tree - https://github.com/scrooloose/nerdtree
@@ -119,6 +119,9 @@ colorscheme base16-ocean
 
 " ####### VIM-CTRL-P Settings: #######
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_working_path_mode = 'ra'
+" Ignores un-necessary files/directories from search (seems buggy)
+"let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist|public)|(\.(swp|hg|git|svn))$'
 
 " ####### From Mathias Dotfiles (updated 9.3.13): #######
 " Make Vim more useful
@@ -286,20 +289,19 @@ let g:syntastic_check_on_wq = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" ####### CTRL-P Settings: #######
-" Ignores un-necessary files/directories from search
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist|public)|(\.(swp|hg|git|svn))$'
-
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
 let g:jsx_ext_required = 0
 "let g:jsx_pragma_required = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
-" let g:user_emmet_leader_key = '<C-n>'
+" Sets Leader key to control + Z. So expand keys are `control + Z + ,`
 let g:user_emmet_leader_key='<C-Z>'
-" let g:user_emmet_expandabbr_key = '<S-Tab>'
-" imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" Set Tab as expander key. See https://coderwall.com/p/_uhrxw/using-tab-key-as-abbreviation-expander-on-emmet-vim
+" Not using, as this conflicts with YouCompleteMe in markup files.
+"imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
 " let g:user_emmet_togglecomment_key = '<c-_>'
 " let g:user_emmet_next_key = '<C-,>'
 " let g:user_emmet_prev_key = '<C-;>'
@@ -313,7 +315,3 @@ let g:user_emmet_leader_key='<C-Z>'
 
 " ####### Base-16 Color Scheme Accent Color Setting #######
 let base16colorspace=256  " Access colors present in 256 colorspace
-
-" ####### YouCompleteMe Settings: #######
-" Allows you to yse Ctrl+]
-map <C-]> :YcmCompleter GoToImprecise<CR>

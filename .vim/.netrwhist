@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/area51/mish-shedlock/content/themes/vip/mishtalk/src/styles/partials'
-let g:netrw_dirhist_2='/Users/danielrobert/Projects/Repositories/bookmarkpress/wordpress/wp-content/themes/bookmarkpress'
-let g:netrw_dirhist_3='/Users/danielrobert/Projects/Repositories/bookmarkpress/wordpress/wp-content/themes'
-let g:netrw_dirhist_4='/Users/danielrobert/Projects/Repositories/bookmarkpress/wordpress/wp-content/themes/escutcheon'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/dwr.io/wordpress/wp-content/themes/independent-publisher-2'
+let g:netrw_dirhist_2='/Users/danielrobert/Projects/WP-Dev/dwr.io/wordpress/wp-content/themes/independent-publisher-2/js'
+let g:netrw_dirhist_3='/Users/danielrobert/Projects/WP-Dev/dwr.io/wordpress/wp-content/themes/independent-publisher-2'
+let g:netrw_dirhist_4='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Level-Up-Tuts/React-And-Redux-For-Everyone/redux-app/src'
+let g:netrw_dirhist_5='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Wes-Bos/CSS-Grid/assets'
+let g:netrw_dirhist_6='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Wes-Bos/CSS-Grid'
+let g:netrw_dirhist_7='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Level-Up-Tuts/React-And-Redux-For-Everyone/redux-app/src'

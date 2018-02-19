@@ -136,6 +136,10 @@ alias mvim='open -a "MacVim"'
 alias sb2='open -a "Sublime Text 2"'
 alias sb='open -a "Sublime Text"'
 alias atom='open -a "Atom"'
+alias imageoptim='open -a ImageOptim'
+
+# Activate MacOS Screensaver
+alias screensaver='open "/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"'
 
 # Ngrok - exposes local port to share temporarily
 alias ngrok='~/Dev-Tools/ngrok/ngrok'
@@ -185,5 +189,12 @@ alias npm-update="sudo npm install npm -g"
 ## Run WP-CLI
 alias dwp="docker-compose run --rm wpcli"
 
+## WP Local Docker Commands - https://github.com/10up/wp-local-docker
+alias dcwp='docker-compose exec --user www-data phpfpm wp'
+alias dcbash='docker-compose exec --user root phpfpm bash'
+
 # MongoDB
 alias mongodb="mongod --config /usr/local/etc/mongod.conf"
+
+# Firefox Browser
+alias firefox-profiles='/Applications/Firefox.app/Contents/macOS/firefox --profilemanager'

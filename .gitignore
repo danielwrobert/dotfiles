@@ -20,8 +20,9 @@ Thumbs.db
 # Sass Files
 *.sass-cache/
 
-# Project Resource Folders
+# Project Resource Folders and symlinks
 *_resources/
+*_resources
 
 # Dandilion Config Files
 *dandelion.yml
