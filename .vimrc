@@ -122,6 +122,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'ra'
 " Ignores un-necessary files/directories from search (seems buggy)
 "let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist|public)|(\.(swp|hg|git|svn))$'
+" Reference: https://github.com/kien/ctrlp.vim/issues/58
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " ####### From Mathias Dotfiles (updated 9.3.13): #######
 " Make Vim more useful

@@ -29,9 +29,6 @@ complete -W "NSGlobalDomain" defaults
 ## Tells system to look in /usr/local/bin BEFORE /usr/bin:
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
-## DRUSH
-export PATH=$PATH:$HOME/Developer/drush
-
 ## ANDROID DEVELOPER TOOLS
 export PATH=$PATH:$HOME/Developer/ADT/sdk/tools
 ## ANDROID ADB
@@ -94,13 +91,17 @@ _completemarks() {
 }
 complete -F _completemarks jump unmark
 
-## NODE.JS
+## NODE.JS - no longer needed. Set up when installing binary - now using NVM (see below)
 # Sets path for Node.js
-export NODE_PATH="/usr/local/bin/node"
+#export NODE_PATH="/usr/local/bin/node"
 # Sets path for NPM
-export NPM_PATH="/usr/local/bin/npm"
+#export NPM_PATH="/usr/local/bin/npm"
 # Sets path for NPM root value
-export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+#export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## PYTHON
 # Setting PATH for Python 2.7

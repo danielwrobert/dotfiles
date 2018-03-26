@@ -1,9 +1,9 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/danielrobert/Projects/WP-Dev/dwr.io/wordpress/wp-content/themes/independent-publisher-2'
-let g:netrw_dirhist_2='/Users/danielrobert/Projects/WP-Dev/dwr.io/wordpress/wp-content/themes/independent-publisher-2/js'
-let g:netrw_dirhist_3='/Users/danielrobert/Projects/WP-Dev/dwr.io/wordpress/wp-content/themes/independent-publisher-2'
-let g:netrw_dirhist_4='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Level-Up-Tuts/React-And-Redux-For-Everyone/redux-app/src'
-let g:netrw_dirhist_5='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Wes-Bos/CSS-Grid/assets'
-let g:netrw_dirhist_6='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Wes-Bos/CSS-Grid'
-let g:netrw_dirhist_7='/Users/danielrobert/Dropbox (Personal)/Learnings/Web/Videos/Level-Up-Tuts/React-And-Redux-For-Everyone/redux-app/src'
+let g:netrw_dirhist_1='/Users/danielrobert/Dropbox (Personal)/Work/Speaking/wcgvl-2018/presentation-slides'
+let g:netrw_dirhist_2='/Users/danielrobert/Dropbox (Personal)/Work/Speaking/wcgvl-2018'
+let g:netrw_dirhist_3='/Users/danielrobert/Dropbox (Personal)/Work/Speaking/wcgvl-2018/demo'
+let g:netrw_dirhist_4='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content/themes/strikebase/build'
+let g:netrw_dirhist_5='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content/themes/strikebase'
+let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content/themes'
+let g:netrw_dirhist_7='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content'
