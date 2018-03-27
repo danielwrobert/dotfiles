@@ -7,11 +7,11 @@ git pull origin master;
 function doUpdate() {
 	rsync --exclude ".git/" \
 		--exclude "init" \
-		--exclude "bin" \
 		--exclude ".DS_Store" \
 		--exclude ".macos" \
 		--exclude ".vimrc_remote" \
 		--exclude "bootstrap.sh" \
+		--exclude "sync.sh" \
 		--exclude "brew.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \

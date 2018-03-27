@@ -29,11 +29,6 @@ complete -W "NSGlobalDomain" defaults
 ## Tells system to look in /usr/local/bin BEFORE /usr/bin:
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
-## ANDROID DEVELOPER TOOLS
-export PATH=$PATH:$HOME/Developer/ADT/sdk/tools
-## ANDROID ADB
-export PATH=$PATH:$HOME/Developer/ADT/sdk/platform-tools
-
 ## ENV VARIABLES AND FUNCTIONS FOR VIRTUALENVWRAPPER (UNCOMMENT AFTER INSTALL)
 export WORKON_HOME=$HOME/virtualenvs
 ## Path for Virtualenvwrapper:
@@ -117,5 +112,6 @@ fi
 
 ## RUBY
 # RVM for easy Ruby installation
+# Also see .profile for path addition.
 # This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
