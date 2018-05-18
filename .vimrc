@@ -22,8 +22,6 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mattn/emmet-vim'
 " NERD Commenter - https://github.com/scrooloose/nerdcommenter
 Plugin 'scrooloose/nerdcommenter'
-" Syntastic - https://github.com/scrooloose/syntastic
-Plugin 'scrooloose/syntastic'
 " Vim Airline - https://github.com/vim-airline/vim-airline
 Plugin 'vim-airline/vim-airline'
 " Vim Airline Themes - https://github.com/vim-airline/vim-airline-themes
@@ -40,10 +38,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-surround'
 " Vim Vinegar - https://github.com/tpope/vim-vinegar
 Plugin 'tpope/vim-vinegar'
-" YouCompleteMe - https://github.com/Valloric/YouCompleteMe
-"Plugin 'Valloric/YouCompleteMe'
-" TernJS - https://github.com/ternjs/tern_for_vim
-"Plugin 'ternjs/tern_for_vim'
 " Vim Mustache Handlebars - https://github.com/mustache/vim-mustache-handlebars
 Plugin 'mustache/vim-mustache-handlebars'
 " Vim JavaScript - https://github.com/pangloss/vim-javascript
@@ -56,6 +50,8 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'posva/vim-vue'
 
 " Previously installed and removed plugins (keeping listed for now)
+" Syntastic - https://github.com/vim-syntastic/syntastic
+" Plugin 'vim-syntastic/syntastic'
 " NERD Tree - https://github.com/scrooloose/nerdtree
 " Plugin 'scrooloose/nerdtree'
 " Vim Fugitive - https://github.com/tpope/vim-fugitive
@@ -166,10 +162,10 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-" #set tabstop=2
+highlight LineNr ctermfg=grey ctermbg=237
+highlight CursorLineNr ctermfg=grey ctermbg=235
+highlight CursorLine ctermbg=237
 " Show “invisible” characters
-" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set lcs=tab:\|\ ,trail:·,eol:¬,nbsp:_
 set list
 " Highlight searches
@@ -277,14 +273,14 @@ autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 
 " ####### Syntastic Plugin Settings: #######
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " ####### Airline Plugin Settings: #######
 " Enables tabline at top to show buffers as tabs:
@@ -294,26 +290,10 @@ let g:airline_powerline_fonts = 1
 " ####### VIM-JSX Settings: #######
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
 let g:jsx_ext_required = 0
-"let g:jsx_pragma_required = 1
 
 " ####### ZenCoding/Emmet Settings and Remappings: #######
 " Sets Leader key to control + Z. So expand keys are `control + Z + ,`
 let g:user_emmet_leader_key='<C-Z>'
-
-" Set Tab as expander key. See https://coderwall.com/p/_uhrxw/using-tab-key-as-abbreviation-expander-on-emmet-vim
-" Not using, as this conflicts with YouCompleteMe in markup files.
-"imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
-" let g:user_emmet_togglecomment_key = '<c-_>'
-" let g:user_emmet_next_key = '<C-,>'
-" let g:user_emmet_prev_key = '<C-;>'
-
-" ####### Toggle Paste Tabs #######
-" Provides visual feedback shown in the status line
-" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
-"nnoremap <F13> :set invpaste paste?<CR>
-"set pastetoggle=<F13>
-"set showmode
 
 " ####### Base-16 Color Scheme Accent Color Setting #######
 let base16colorspace=256  " Access colors present in 256 colorspace
