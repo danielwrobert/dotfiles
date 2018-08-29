@@ -1,4 +1,4 @@
-" ####### Begin Vundle Configuration #######
+" Begin Vundle Configuration
 " First you need to install Vundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set nocompatible     " be iMproved, required
 filetype off         " required
@@ -28,8 +28,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Vim BufOnly - https://github.com/schickling/vim-bufonly
 Plugin 'schickling/vim-bufonly'
-" Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
-Plugin 'altercation/vim-colors-solarized'
 " Vim EasyMotion - https://github.com/Lokaltog/vim-easymotion
 Plugin 'Lokaltog/vim-easymotion'
 " Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
@@ -48,6 +46,8 @@ Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-pug'
 " Vim Vue - https://github.com/posva/vim-vue
 Plugin 'posva/vim-vue'
+" Vim Better Comments - https://github.com/jbgutierrez/vim-better-comments
+Plugin 'jbgutierrez/vim-better-comments'
 
 " Previously installed and removed plugins (keeping listed for now)
 " Syntastic - https://github.com/vim-syntastic/syntastic
@@ -64,6 +64,8 @@ Plugin 'posva/vim-vue'
 " Plugin 'blueshirts/darcula'
 " GoYo (Distraction free mode for md editing) - https://github.com/junegunn/goyo.vim
 " Plugin 'junegunn/goyo.vim'
+" Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
+"Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,10 +82,10 @@ filetype plugin indent on    " required
 " auto-approve removal
 
 " see :h vundle for more details or wiki for FAQ
-" ####### End Vundle Configuration #######
+" End Vundle Configuration
 
 
-" ####### From MacVim Nettuts Video 1 (added 6.6.13): #######
+" From MacVim Nettuts Video 1 (added 6.6.13):
 " Set tabs to 4 spaces
 set tabstop=4
 " Set softtabs - spaces as tabs
@@ -104,24 +106,16 @@ set foldenable
 "set background=dark
 "set background=light
 "colorscheme solarized
-" Setup for Base16 Color Schemes:
-if filereadable(expand("~/.vimrc_background"))
-  "let base16colorspace=256 " Access colors present in 256 colorspace - not
-  "needed for iTerm2
-  source ~/.vimrc_background
-endif
-let g:airline_theme='base16_ocean'
-colorscheme base16-ocean
 
-" ####### VIM-CTRL-P Settings: #######
+" VIM-CTRL-P Settings:
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'ra'
 " Ignores un-necessary files/directories from search (seems buggy)
 "let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist|public)|(\.(swp|hg|git|svn))$'
-" Reference: https://github.com/kien/ctrlp.vim/issues/58
+" Reference - https://github.com/kien/ctrlp.vim/issues/58
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-" ####### From Mathias Dotfiles (updated 9.3.13): #######
+" From Mathias Dotfiles (updated 9.3.13):
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -159,12 +153,12 @@ set secure
 " Enable line numbers
 set number
 " Enable syntax highlighting
-syntax on
+syntax enable
 " Highlight current line
 set cursorline
-highlight LineNr ctermfg=grey ctermbg=237
-highlight CursorLineNr ctermfg=grey ctermbg=235
-highlight CursorLine ctermbg=237
+"highlight LineNr ctermfg=grey ctermbg=237
+"highlight CursorLineNr ctermfg=grey ctermbg=235
+"highlight CursorLine term=bold cterm=bold ctermbg=235
 " Show “invisible” characters
 set lcs=tab:\|\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -226,19 +220,19 @@ endif
 " Enable filetype plugins (nerdcommenter - https://github.com/scrooloose/nerdcommenter)
 filetype plugin on
 
-" ####### From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc #######
-" ####### Command Remappings: #######
+" From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc
+" Command Remappings:
 " nnoremap <leader><tab> :NERDTree<CR>
 " let g:NERDTreeDirArrows=0
 
-" ##### Window Navagation #####
+" Window Navagation
 " Quicker Window Switching
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" ##### Convenient Copy & Paste to Clipboard (Mac only) #####
+" Convenient Copy & Paste to Clipboard (Mac only)
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin\n"
@@ -248,7 +242,7 @@ if has("unix")
   endif
 endif
 
-" ####### Specific Filetype Settings #######
+" Specific Filetype Settings
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -272,7 +266,7 @@ autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 
-" ####### Syntastic Plugin Settings: #######
+" Syntastic Plugin Settings:
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
@@ -282,18 +276,25 @@ autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
-" ####### Airline Plugin Settings: #######
+" Airline Plugin Settings:
 " Enables tabline at top to show buffers as tabs:
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" ####### VIM-JSX Settings: #######
+" VIM-JSX Settings:
 " adding Vim-JSX (https://github.com/mxw/vim-jsx) support
 let g:jsx_ext_required = 0
 
-" ####### ZenCoding/Emmet Settings and Remappings: #######
+" ZenCoding/Emmet Settings and Remappings:
 " Sets Leader key to control + Z. So expand keys are `control + Z + ,`
 let g:user_emmet_leader_key='<C-Z>'
 
-" ####### Base-16 Color Scheme Accent Color Setting #######
-let base16colorspace=256  " Access colors present in 256 colorspace
+" Setup for Base16 Color Schemes:
+if filereadable(expand("~/.vimrc_background"))
+  "let base16colorspace=256 " Access colors present in 256 colorspace - not
+  "needed for iTerm2
+  let base16colorspace=256  " Access colors present in 256 colorspace
+  source ~/.vimrc_background
+endif
+let g:airline_theme='base16_ocean'
+colorscheme base16-ocean
