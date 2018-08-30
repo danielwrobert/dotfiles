@@ -1,71 +1,26 @@
-" Begin Vundle Configuration
-" First you need to install Vundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-set nocompatible     " be iMproved, required
+" don't bother with vi compatibility - required for Vundle as well
+set nocompatible
+
+" Enable syntax highlighting
+syntax enable
+
+" forces syntax highlighting for PHP files, which was oddly broken
+autocmd BufEnter *.php :set syntax=PHP
+
+" Vundle
+filetype on          " without this vim emits a zero exit status, later, because of :ft off
 filetype off         " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" install Vundle bundles
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Additional plugins
-" Keep Plugin commands between vundle#begin/end.
-" CTRL+P - https://github.com/ctrlpvim/ctrlp.vim
-Plugin 'ctrlpvim/ctrlp.vim'
-" Editorconfig - https://github.com/editorconfig/editorconfig-vim
-Plugin 'editorconfig/editorconfig-vim'
-" Emmet Vim - https://github.com/mattn/emmet-vim
-Plugin 'mattn/emmet-vim'
-" NERD Commenter - https://github.com/scrooloose/nerdcommenter
-Plugin 'scrooloose/nerdcommenter'
-" Vim Airline - https://github.com/vim-airline/vim-airline
-Plugin 'vim-airline/vim-airline'
-" Vim Airline Themes - https://github.com/vim-airline/vim-airline-themes
-Plugin 'vim-airline/vim-airline-themes'
-" Vim BufOnly - https://github.com/schickling/vim-bufonly
-Plugin 'schickling/vim-bufonly'
-" Vim EasyMotion - https://github.com/Lokaltog/vim-easymotion
-Plugin 'Lokaltog/vim-easymotion'
-" Base16 (colorscheme) - https://github.com/chriskempson/base16-vim
-Plugin 'chriskempson/base16-vim'
-" Vim Surround - https://github.com/tpope/vim-surround
-Plugin 'tpope/vim-surround'
-" Vim Vinegar - https://github.com/tpope/vim-vinegar
-Plugin 'tpope/vim-vinegar'
-" Vim Mustache Handlebars - https://github.com/mustache/vim-mustache-handlebars
-Plugin 'mustache/vim-mustache-handlebars'
-" Vim JavaScript - https://github.com/pangloss/vim-javascript
-Plugin 'pangloss/vim-javascript'
-" Vim JSX - https://github.com/mxw/vim-jsx
-Plugin 'mxw/vim-jsx'
-" Vim Jade/Pug - https://github.com/digitaltoad/vim-pug
-Plugin 'digitaltoad/vim-pug'
-" Vim Vue - https://github.com/posva/vim-vue
-Plugin 'posva/vim-vue'
-" Vim Better Comments - https://github.com/jbgutierrez/vim-better-comments
-Plugin 'jbgutierrez/vim-better-comments'
-
-" Previously installed and removed plugins (keeping listed for now)
-" Syntastic - https://github.com/vim-syntastic/syntastic
-" Plugin 'vim-syntastic/syntastic'
-" NERD Tree - https://github.com/scrooloose/nerdtree
-" Plugin 'scrooloose/nerdtree'
-" Vim Fugitive - https://github.com/tpope/vim-fugitive
-" Plugin 'tpope/vim-fugitive'
-" Seti (colorscheme) - https://github.com/trusktr/seti
-" Plugin 'trusktr/seti'
-" Vim Dracula (colorscheme) - https://github.com/dracula/vim
-" Plugin 'dracula/vim'
-" Vim Darcula (colorscheme) - https://github.com/blueshirts/darcula
-" Plugin 'blueshirts/darcula'
-" GoYo (Distraction free mode for md editing) - https://github.com/junegunn/goyo.vim
-" Plugin 'junegunn/goyo.vim'
-" Vim Solarized (colorscheme) - https://github.com/altercation/vim-colors-solarized
-"Plugin 'altercation/vim-colors-solarized'
+" call vundle#begin('~/some/path/here')
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,13 +54,6 @@ set autoindent
 set wildmode=list:longest
 " Enable Tree Folding
 set foldenable
-" Set Colorscheme
-" let g:hybrid_use_Xresources=1
-" Setup for Solarized Color Schemes:
-"let g:airline_theme='solarized'
-"set background=dark
-"set background=light
-"colorscheme solarized
 
 " VIM-CTRL-P Settings:
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -116,8 +64,6 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " From Mathias Dotfiles (updated 9.3.13):
-" Make Vim more useful
-set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -152,8 +98,6 @@ set exrc
 set secure
 " Enable line numbers
 set number
-" Enable syntax highlighting
-syntax enable
 " Highlight current line
 set cursorline
 "highlight LineNr ctermfg=grey ctermbg=237
@@ -289,6 +233,13 @@ let g:jsx_ext_required = 0
 " Sets Leader key to control + Z. So expand keys are `control + Z + ,`
 let g:user_emmet_leader_key='<C-Z>'
 
+" Set Colorscheme
+" let g:hybrid_use_Xresources=1
+" Setup for Solarized Color Schemes:
+"let g:airline_theme='solarized'
+"set background=dark
+"set background=light
+"colorscheme solarized
 " Setup for Base16 Color Schemes:
 if filereadable(expand("~/.vimrc_background"))
   "let base16colorspace=256 " Access colors present in 256 colorspace - not

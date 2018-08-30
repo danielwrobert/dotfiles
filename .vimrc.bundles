@@ -1,0 +1,33 @@
+" Keep Plugin commands between vundle#begin/end.
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'schickling/vim-bufonly'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'posva/vim-vue'
+Plugin 'jbgutierrez/vim-better-comments'
+
+" Previously installed and removed plugins
+" Plugin 'vim-syntastic/syntastic'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'trusktr/seti'
+" Plugin 'dracula/vim'
+" Plugin 'blueshirts/darcula'
+" Plugin 'junegunn/goyo.vim'
+" Plugin 'altercation/vim-colors-solarized'
+
