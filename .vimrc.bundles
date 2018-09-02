@@ -20,14 +20,10 @@ Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'posva/vim-vue'
 Plugin 'jbgutierrez/vim-better-comments'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-syntastic/syntastic'
 
 " Previously installed and removed plugins
-" Plugin 'vim-syntastic/syntastic'
-" Plugin 'scrooloose/nerdtree'
 " Plugin 'tpope/vim-fugitive'
-" Plugin 'trusktr/seti'
-" Plugin 'dracula/vim'
-" Plugin 'blueshirts/darcula'
 " Plugin 'junegunn/goyo.vim'
-" Plugin 'altercation/vim-colors-solarized'
 
