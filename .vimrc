@@ -16,31 +16,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " install Vundle bundles
-" alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+" ensure ftdetect et al work by including this after the Vundle stuff
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-" "filetype plugin on
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to
-" auto-approve removal
-
-" see :h vundle for more details or wiki for FAQ
 " End Vundle Configuration
 
-
-" From MacVim Nettuts Video 1 (added 6.6.13):
 " Set tabs to 4 spaces
 set tabstop=4
 " Set softtabs - spaces as tabs
@@ -55,15 +41,6 @@ set wildmode=list:longest
 " Enable Tree Folding
 set foldenable
 
-" VIM-CTRL-P Settings:
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_working_path_mode = 'ra'
-" Ignores un-necessary files/directories from search (seems buggy)
-"let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist|public)|(\.(swp|hg|git|svn))$'
-" Reference - https://github.com/kien/ctrlp.vim/issues/58
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-" From Mathias Dotfiles (updated 9.3.13):
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -150,33 +127,24 @@ function! StripWhitespace()
 	call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+" Save a file as root in case you forgot to sudo
+cnoremap w!! %!sudo tee > /dev/null %
 
 " Automatic commands
 if has("autocmd")
-	" Enable file type detection
-	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
-" Enable filetype plugins (nerdcommenter - https://github.com/scrooloose/nerdcommenter)
-filetype plugin on
-
-" From Kam's Dotfiles - https://github.com/kamykaze/dotfiles/blob/master/_vimrc
-" Command Remappings:
-" nnoremap <leader><tab> :NERDTree<CR>
-" let g:NERDTreeDirArrows=0
-
-" Window Navagation
-" Quicker Window Switching
+" keyboard shortcuts and remappings
+" quicker window switching
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Convenient Copy & Paste to Clipboard (Mac only)
+" convenient copy & paste to clipboard (mac only)
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin\n"
@@ -186,7 +154,15 @@ if has("unix")
   endif
 endif
 
-" Specific Filetype Settings
+" highlight .json files as .js
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+" fdoc is yaml
+autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
+" md is markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md set spell
+
+" specific filetype settings
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -210,30 +186,42 @@ autocmd FileType html,css,scss,javascript,php inoremap <buffer> [ []<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> ' ''<Left>
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> " ""<Left>
 
-" Syntastic Plugin Settings:
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+" plugin settings:
+" ctrl-p
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_match_window = 'order:ttb,max:20'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" syntastic
 "let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_loc_list_height = 5
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+"let g:syntastic_check_on_wq = 1
+"let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_error_symbol = '❌'
+"let g:syntastic_style_error_symbol = '⁉️'
+"let g:syntastic_warning_symbol = '⚠️'
+"let g:syntastic_style_warning_symbol = '💩'
+"highlight link SyntasticErrorSign SignColumn
+"highlight link SyntasticWarningSign SignColumn
+"highlight link SyntasticStyleErrorSign SignColumn
+"highlight link SyntasticStyleWarningSign SignColumn
 
-" Airline Plugin Settings:
+" airline
 " Enables tabline at top to show buffers as tabs:
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" VIM-JSX Settings:
-" adding Vim-JSX (https://github.com/mxw/vim-jsx) support
-let g:jsx_ext_required = 0
+" vim-jsx
+let g:jsx_ext_required = 0     " adds support
 
-" ZenCoding/Emmet Settings and Remappings:
+" emmet
 " Sets Leader key to control + Z. So expand keys are `control + Z + ,`
 let g:user_emmet_leader_key='<C-Z>'
 
-" Set Colorscheme
+" colorscheme settings
 " let g:hybrid_use_Xresources=1
 " Setup for Solarized Color Schemes:
 "let g:airline_theme='solarized'
@@ -242,8 +230,6 @@ let g:user_emmet_leader_key='<C-Z>'
 "colorscheme solarized
 " Setup for Base16 Color Schemes:
 if filereadable(expand("~/.vimrc_background"))
-  "let base16colorspace=256 " Access colors present in 256 colorspace - not
-  "needed for iTerm2
   let base16colorspace=256  " Access colors present in 256 colorspace
   source ~/.vimrc_background
 endif
