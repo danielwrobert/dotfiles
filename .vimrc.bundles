@@ -22,6 +22,7 @@ Plugin 'posva/vim-vue'
 Plugin 'jbgutierrez/vim-better-comments'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'prettier/vim-prettier'
 
 " Previously installed and removed plugins
 " Plugin 'tpope/vim-fugitive'
