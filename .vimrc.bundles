@@ -13,7 +13,6 @@ Plugin 'schickling/vim-bufonly'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -26,5 +25,6 @@ Plugin 'prettier/vim-prettier'
 
 " Previously installed and removed plugins
 " Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-vinegar'
 " Plugin 'junegunn/goyo.vim'
 
