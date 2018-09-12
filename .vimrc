@@ -129,7 +129,7 @@ endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 
 " Save a file as root in case you forgot to sudo
-cnoremap w!! %!sudo tee > /dev/null %
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Automatic commands
 if has("autocmd")
@@ -166,8 +166,8 @@ autocmd BufRead,BufNewFile *.md set spell
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 "add auto-close curly-braces
 autocmd FileType html,css,scss,javascript,php inoremap <buffer> { {}<Left>
