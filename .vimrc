@@ -4,9 +4,6 @@ set nocompatible
 " Enable syntax highlighting
 syntax enable
 
-" forces syntax highlighting for PHP files, which was oddly broken
-autocmd BufEnter *.php :set syntax=PHP
-
 " Vundle
 filetype on          " without this vim emits a zero exit status, later, because of :ft off
 filetype off         " required
