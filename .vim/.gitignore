@@ -1,8 +1,10 @@
 # Ignore Vim files specific to this directory
+.netrwhist
+backups/*
+undo/*
 
 # Ignore all bundles except for Vundle.
 # Installs are managed by the Vundle plugin.
-!bundle/
 bundle/*
 !bundle/Vundle.vim
 

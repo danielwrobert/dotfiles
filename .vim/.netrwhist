@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/danielrobert/Dropbox (Personal)/Work/Speaking/wcgvl-2018/presentation-slides'
-let g:netrw_dirhist_2='/Users/danielrobert/Dropbox (Personal)/Work/Speaking/wcgvl-2018'
-let g:netrw_dirhist_3='/Users/danielrobert/Dropbox (Personal)/Work/Speaking/wcgvl-2018/demo'
-let g:netrw_dirhist_4='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content/themes/strikebase/build'
-let g:netrw_dirhist_5='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content/themes/strikebase'
-let g:netrw_dirhist_6='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content/themes'
-let g:netrw_dirhist_7='/Users/danielrobert/Projects/WP-Dev/area51/strikebase/wordpress/wp-content'
