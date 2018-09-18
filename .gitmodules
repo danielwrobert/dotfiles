@@ -1,3 +1,6 @@
 [submodule ".vim/colors/base16"]
 	path = .vim/colors/base16
 	url = git@github.com:chriskempson/base16.git
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
+	url = git@github.com:VundleVim/Vundle.vim.git
