@@ -93,3 +93,10 @@ fi
 # Also see .profile for path addition.
 # This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s $BASE16_SHELL/profile_helper.sh ] && \
+        eval "$($BASE16_SHELL/profile_helper.sh)"
