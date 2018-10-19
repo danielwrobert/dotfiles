@@ -16,8 +16,6 @@ alias h="history"
 alias j="jobs"
 alias v="vim"
 alias m="mvim ."
-alias s="sb ."
-alias s2="sb2 ."
 alias o="open"
 alias oo="open ."
 alias scr="screen -r"
@@ -133,9 +131,6 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 ## PERSONAL ALIASES:
 # Code Editor Shortcuts
 alias mvim='open -a "MacVim"'
-alias sb2='open -a "Sublime Text 2"'
-alias sb='open -a "Sublime Text"'
-alias atom='open -a "Atom"'
 alias imageoptim='open -a ImageOptim'
 
 # Activate MacOS Screensaver
@@ -180,8 +175,6 @@ alias svnd="svn diff | colordiff"
 alias cgrep="grep --color=always -rn"
 
 # Node and NPM
-## Update NodeJS via N
-alias node-update="sudo n stable"
 ## Update NPM
 alias npm-update="sudo npm install npm -g"
 
@@ -192,6 +185,9 @@ alias dwp="docker-compose run --rm wpcli"
 ## WP Local Docker Commands - https://github.com/10up/wp-local-docker
 alias dcwp='docker-compose exec --user www-data phpfpm wp'
 alias dcbash='docker-compose exec --user root phpfpm bash'
+
+# Ngrok
+alias ngrok="~/ngrok"
 
 # MongoDB
 alias mongodb="mongod --config /usr/local/etc/mongod.conf"
