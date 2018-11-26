@@ -137,7 +137,7 @@ alias imageoptim='open -a ImageOptim'
 alias screensaver='open "/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"'
 
 # Ngrok - exposes local port to share temporarily
-alias ngrok='~/Dev-Tools/ngrok/ngrok'
+alias ngrok='~/ngrok'
 
 # FLush System DNS Cache
 alias flushdns='sudo dscacheutil -flushcache'
