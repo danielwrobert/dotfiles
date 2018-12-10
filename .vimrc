@@ -222,6 +222,11 @@ let g:jsx_ext_required = 0     " adds support
 " Sets Leader key to control + Z. So expand keys are `control + Z + ,`
 let g:user_emmet_leader_key='<C-Z>'
 
+" prettier
+" enable vim-prettier to run in files without requiring the "@format" doc tag.
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
 " colorscheme settings
 " let g:hybrid_use_Xresources=1
 " Setup for Solarized Color Schemes:
