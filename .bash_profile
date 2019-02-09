@@ -28,25 +28,20 @@ complete -W "NSGlobalDomain" defaults
 # Tells system to look in /usr/local/bin BEFORE /usr/bin:
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
-# ENV VARIABLES AND FUNCTIONS FOR VIRTUALENVWRAPPER (UNCOMMENT AFTER INSTALL)
-export WORKON_HOME=$HOME/virtualenvs
-# Path for Virtualenvwrapper:
-. /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
-
-# PHP CLI version (via Homebrew)
-#export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
-
 # Composer
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # WP-CLI Bash completions
 source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
 
+# PHPCS config
+PATH="$PATH:$HOME/wpcs/bin"
+
 # Set SVN Default Editor to VIM
 export SVN_EDITOR=vim
 
 # GIT Autocomplete
-source ~/.git-completion.bash
+source ~/git-completion.bash
 
 # Set up path jumping with symbolic links
 # Ref - http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
@@ -76,24 +71,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# PYTHON
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-#PATH="/usr/local/Cellar/python/2.7.13_1:${PATH}"
-export PATH
-
-# PYENV - https://github.com/pyenv/pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 # RUBY
 # RVM for easy Ruby installation
-# Also see .profile for path addition.
-# This loads RVM into a shell session (Should be last occurance in this file! http://bit.ly/sFXsQE)
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Adds RVM to PATH for scripting
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
