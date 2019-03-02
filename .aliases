@@ -21,6 +21,9 @@ alias oo="open ."
 alias scr="screen -r"
 alias scs="screen -S"
 alias scl="screen -ls"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+#alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -187,7 +190,7 @@ alias dcwp='docker-compose exec --user www-data phpfpm wp'
 alias dcbash='docker-compose exec --user root phpfpm bash'
 
 # Ngrok
-alias ngrok="~/ngrok"
+alias ngrok="~/Tools/ngrok"
 
 # MongoDB
 alias mongodb="mongod --config /usr/local/etc/mongod.conf"
