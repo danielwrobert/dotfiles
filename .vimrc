@@ -128,6 +128,9 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root in case you forgot to sudo
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
+" Enter cleans the search highlight
+nnoremap <CR> :nohlsearch<cr>
+
 " Automatic commands
 if has("autocmd")
 	" Treat .json files as .js
