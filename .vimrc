@@ -198,6 +198,7 @@ nnoremap <leader>b :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
 " syntastic
+let g:syntastic_php_phpcs_args = "--standard=WordPress-Extra"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 1
@@ -229,6 +230,9 @@ let g:user_emmet_leader_key='<C-Z>'
 " enable vim-prettier to run in files without requiring the "@format" doc tag.
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
+" The Silver Searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " colorscheme settings
 " let g:hybrid_use_Xresources=1
