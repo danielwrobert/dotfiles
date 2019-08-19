@@ -20,6 +20,8 @@ Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'prettier/vim-prettier'
+Plugin 'mileszs/ack.vim'
+Plugin 'elzr/vim-json'
 
 " Previously installed and removed plugins
 " Plugin 'tpope/vim-fugitive'
