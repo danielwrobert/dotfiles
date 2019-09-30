@@ -241,10 +241,15 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "set background=dark
 "set background=light
 "colorscheme solarized
+" Setup for Dracula Color Schemes:
+"let g:dracula_italic = 0
+"let g:airline_theme='violet' " More readable then dracula theme
+"colorscheme dracula
 " Setup for Base16 Color Schemes:
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256  " Access colors present in 256 colorspace
   source ~/.vimrc_background
 endif
-let g:airline_theme='base16_ocean'
+let g:airline_theme='violet' " Better Airline theme when Dracula is active
+"let g:airline_theme='base16_ocean'
 colorscheme base16-ocean

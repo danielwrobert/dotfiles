@@ -12,10 +12,13 @@ fi
 if tput setaf 1 &> /dev/null; then
 	tput sgr0
 	if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
+		# These colors take presidence - see tput color tables for adjustments
 		MAGENTA=$(tput setaf 9)
 		ORANGE=$(tput setaf 172)
-		GREEN=$(tput setaf 190)
+		#GREEN=$(tput setaf 190)
+		GREEN=$(tput setaf 84)
 		PURPLE=$(tput setaf 141)
+		#PURPLE=$(tput setaf 171)
 		WHITE=$(tput setaf 256)
 	else
 		MAGENTA=$(tput setaf 5)
@@ -95,4 +98,9 @@ prompt_git() {
 }
 
 # Set the terminal title and prompt.
-PS1="\[${BOLD}${ORANGE}\]\u: \[\033[37m\]in \[\033[0;36m\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$MAGENTA\]\$(prompt_git)\n\\[${BOLD}\033[37m\]$ \[$RESET\]"
+# Default colors - works well with Base16 Ocean
+#PS1="\[${BOLD}${ORANGE}\]\u: \[\033[37m\]in \[\033[0;36m\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${MAGENTA}\]\$(prompt_git)\n\\[${BOLD}\033[37m\]$ \[$RESET\]"
+# Dracula theme colors
+PS1="\[${BOLD}${PURPLE}\]\u: \[\033[37m\]in \[${GREEN}\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${MAGENTA}\]\$(prompt_git)\n\\[${BOLD}\033[37m\]$ \[$RESET\]"
+# Dracula theme colors - Alt
+#PS1="\[${BOLD}${PURPLE}\]\u: \[\033[37m\]in \[\033[01;34m\]\w\[\033[37m\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[${GREEN}\]\$(prompt_git)\n\\[${BOLD}\033[37m\]$ \[$RESET\]"
