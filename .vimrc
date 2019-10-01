@@ -234,22 +234,14 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " The Silver Searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" colorscheme settings
-" let g:hybrid_use_Xresources=1
-" Setup for Solarized Color Schemes:
-"let g:airline_theme='solarized'
-"set background=dark
-"set background=light
-"colorscheme solarized
-" Setup for Dracula Color Schemes:
-"let g:dracula_italic = 0
-"let g:airline_theme='violet' " More readable then dracula theme
-"colorscheme dracula
-" Setup for Base16 Color Schemes:
+" Color scheme settings:
+" Setup for Base16 color schemes
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256  " Access colors present in 256 colorspace
   source ~/.vimrc_background
 endif
+colorscheme base16-ocean
+" Airline colors
+"let g:airline_theme='solarized'
 let g:airline_theme='violet' " Better Airline theme when Dracula is active
 "let g:airline_theme='base16_ocean'
-colorscheme base16-ocean
