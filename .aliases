@@ -23,7 +23,7 @@ alias scs="screen -S"
 alias scl="screen -ls"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
-#alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -139,17 +139,11 @@ alias imageoptim='open -a ImageOptim'
 # Activate MacOS Screensaver
 alias screensaver='open "/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"'
 
-# Ngrok - exposes local port to share temporarily
-alias ngrok='~/ngrok'
-
 # FLush System DNS Cache
 alias flushdns='sudo dscacheutil -flushcache'
 
 # Native JavaScript Console application in Termianl (Mac)
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
-
-# MAMP MySQL
-alias mamp-mysql="/Applications/MAMP/Library/bin/mysql -u root -p"
 
 # Root/System MySQL
 # Note: This has since been uninstalled in favor of taking the
