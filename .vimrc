@@ -114,6 +114,8 @@ if exists("&relativenumber")
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+" Easier paste format toggling
+set pastetoggle=<F3>
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
