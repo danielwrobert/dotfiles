@@ -23,6 +23,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'mileszs/ack.vim'
 Plugin 'elzr/vim-json'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
+Plugin 'rizzatti/dash.vim'
 
 " Previously installed and removed plugins
 " Plugin 'tpope/vim-fugitive'
