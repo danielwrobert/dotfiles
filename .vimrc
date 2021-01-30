@@ -74,6 +74,8 @@ set secure
 set number
 " Highlight current line
 set cursorline
+" Toggle highlighting on and off (mainly for comment contrast)
+nnoremap <Leader>c :set cursorline!<CR>
 "highlight LineNr ctermfg=grey ctermbg=237
 "highlight CursorLineNr ctermfg=grey ctermbg=235
 "highlight CursorLine term=bold cterm=bold ctermbg=235
