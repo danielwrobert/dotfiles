@@ -69,7 +69,7 @@ ZSH_THEME="thejoker"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node nvm npm npx yarn jump history osx rsync sudo web-search extract wp-cli composer laravel)
+plugins=(git node nvm npm yarn jump history osx rsync sudo web-search extract wp-cli composer laravel)
 
 source $ZSH/oh-my-zsh.sh
 
